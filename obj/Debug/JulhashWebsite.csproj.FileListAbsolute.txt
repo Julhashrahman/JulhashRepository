@@ -1,0 +1,10 @@
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\bin\JulhashWebsite.dll
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\bin\JulhashWebsite.pdb
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\bin\EntityFramework.dll
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\bin\EntityFramework.xml
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\obj\Debug\JulhashWebsite.dll
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\obj\Debug\JulhashWebsite.pdb
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\bin\Ninject.dll
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\bin\Ninject.pdb
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\bin\Ninject.xml
+E:\ASP.NET Practise\JulhashWebsite\JulhashWebsite\obj\Debug\JulhashWebsite.csprojResolveAssemblyReference.cache
