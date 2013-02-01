@@ -1,0 +1,83 @@
+﻿@model JulhashWebsite.Helpers.PaginatedList<JulhashWebsite.Models.Portfolio>
+@{
+    ViewBag.Title = "Portfolio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    $(function () {
+        $('#slides').slides({
+            preload: true,
+            preloadImage: 'img/loading.gif',
+            play: 5000,
+            pause: 2500,
+            hoverPause: true,
+            animationStart: function (current) {
+                $('.caption').animate({
+                    bottom: -35
+                }, 100);
+                if (window.console && console.log) {
+                    // example return of current slide number
+                    console.log('animationStart on slide: ', current);
+                };
+            },
+            animationComplete: function (current) {
+                $('.caption').animate({
+                    bottom: 0
+                }, 200);
+                if (window.console && console.log) {
+                    // example return of current slide number
+                    console.log('animationComplete on slide: ', current);
+                };
+            },
+            slidesLoaded: function () {
+                $('.caption').animate({
+                    bottom: 0
+                }, 200);
+            }
+        });
+    });
+	</script>
+<div>
+   <div class="header">
+        Portfolio</div>
+    <div id="example">
+        @*		<img src="img/new-ribbon.png" width="112" height="112" alt="New Ribbon" id="ribbon">*@
+        <div id="slides">
+            <div class="slides_container">
+                @foreach (var item in Model)
+                {
+                    string itemPath = "";
+                    itemPath = @item.Path.Replace("Thumb", "Large");
+                     
+
+                    <div class="slide">
+                        <a href="http://www.flickr.com/photos/jliba/4665625073/" title="145.365 - Happy Bokeh Thursday! | Flickr - Photo Sharing!"
+                            target="_blank">
+                            <img src="@itemPath" width="570" height="270" alt="Slide 1">
+                        </a>
+                        <div class="caption" style="bottom: 0">
+                            <p>
+                                @item.Caption</p>
+                        </div>
+                    </div>
+                     
+                }
+            </div>
+            <a href="#" class="prev">
+                <img src="Image/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+            <a href="#" class="next">
+                <img src="Image/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+        </div>
+        <img src="Image/example-frame.png" width="739" height="341" alt="Example Frame" id="frame">
+    </div>
+  @*  @if (Model.HasPreviousPage)
+    {      
+        @Html.ActionLink("<<<", "Index", new { page = (Model.PageIndex - 1) })
+     
+    }
+    &nbsp;|&nbsp;
+    @if (@Model.HasNextPage)
+    {
+        @Html.ActionLink(">>>", "Index", new { page = (Model.PageIndex + 1) })
+    }*@
+</div>

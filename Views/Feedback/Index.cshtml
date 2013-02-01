@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="@Url.Content("~/Scripts/knockout-1.2.1.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        //activates KO
+        ko.applyBindings(viewModel);
+    });
+
+    var viewModel = {
+        FirstName: ko.observable(''),
+        LastName: ko.observable('')
+    };
+
+    viewModel.FullName = ko.dependentObservable(function () {
+        return viewModel.FirstName() + "" + viewModel.LastName();
+    });
+
+
+</script>
+
+<div class="header">
+    Feedback</div>
+<div>
+    <div class="content-bg" style="padding-left: 200px; padding-top: 30px;">
+        <div class="text">
+            <p>
+              @*  First Name:
+                <input type="text" data-bind="value: FirstName" /><br />
+                Last Name:&nbsp;
+                <input type="text" data-bind="value: LastName" /><br />
+                Name: <span data-bind="text: FullName"></span>*@
+            </p>
+        </div>
+    </div>
+</div>

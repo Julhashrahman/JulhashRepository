@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<images>
+  <image>
+    <filename>anthonyrobins.jpg</filename>
+    <description>Anthony Robbins</description>
+  </image>
+  <image>
+    <filename>chetanbhagat.jpg</filename>
+    <description>Chetan Bhagat</description>
+  </image>
+  <image>
+    <filename>deepak.jpg</filename>
+    <description>Deepak Chopra</description>
+  </image>
+  <image>
+    <filename>robinsharma.jpg</filename>
+    <description>Robin Sharama</description>
+  </image>
+  <image>
+    <filename>stevenkovey.jpg</filename>
+    <description>Steven Covey</description>
+  </image>
+  <image>
+    <filename>taslima.jpg</filename>
+    <description>Taslima Nasrren</description>
+  </image>
+  <image>
+    <filename>vikarm.jpg</filename>
+    <description>Vikram Seth</description>
+  </image>
+  <image>
+    <filename>DSC01482.JPG.jpg</filename>
+    <description>Dhananjay Kumar</description>
+  </image>
+  <image>
+    <filename>DSC01482.JPG.jpg</filename>
+    <description>Dj</description>
+  </image>
+  <image>
+    <filename>mcb30.jpg</filename>
+    <description>Mahesh Chand</description>
+  </image>
+</images>
