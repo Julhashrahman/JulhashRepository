@@ -3,7 +3,7 @@ html, body, form, fieldset, input, select, textarea {	font-size: 100.01%; }
 
 body {	text-align: center;	font-family: Trebuchet MS, Verdana, Sans-Serif;	background-color: #424242;		background-image: url(../Image/pattern4.gif);}
 
-.header { font-size:16px; font-weight:bold; color:Gray; padding-left:68px; padding-top:10px; }
+.header { font-size:16px; font-weight:bold; color:Gray; padding-left:69px; padding-top:10px; padding-bottom:12px; }
 
 #Wrapper { position:relative; margin-top:100px;	overflow: hidden; height: 600px; width: 100%;	 }
 
