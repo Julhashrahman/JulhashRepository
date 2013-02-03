@@ -125,6 +125,7 @@
     <Content Include="Image\container-bg.png" />
     <Content Include="Image\drape.png" />
     <Content Include="Image\example-frame.png" />
+    <Content Include="Image\FreeVector-Floral-Tiles-Pattern.jpg" />
     <Content Include="Image\ImageMetaData.xml" />
     <Content Include="Image\lightbox-blank.gif" />
     <Content Include="Image\lightbox-btn-close.gif" />
