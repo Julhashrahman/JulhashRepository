@@ -21,7 +21,12 @@ body {	text-align: center;	font-family: Trebuchet MS, Verdana, Sans-Serif;	backg
 
 .content-bg { background: transparent url(../Image/example-frame.png) no-repeat scroll left top; height:320px; padding-left:100px; padding-top:100px; }
 
-.text { font-size:12px;}
+.contenttext {padding-top: 40px;}
+
+.text-content-bg {margin:-21px 146px 0px -16px; height:269px; background-color:Gray; }
+
+
+.text { font-size:12px; color:White; padding-left:20px; padding-top:40px;}
 
 .clear { clear:both;}
 
