@@ -21,7 +21,7 @@ namespace JulhashWebsite.Controllers
             //
             // GET: /Portfolio/Page/2
 
-            const int pageSize = 15;
+            const int pageSize = 20;
 
             var Portfolios = julhashRepository.GetPortfolios();
             //var paginatedImages = images.Skip((page ?? 0) * pageSize).Take(pageSize).ToList();

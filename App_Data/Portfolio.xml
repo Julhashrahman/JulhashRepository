@@ -136,4 +136,12 @@
     <Path>../Image/portfolio/Ecommerce/Thumb/aussiebanglagift_2.jpg</Path>
     <SortOrder>16</SortOrder>
   </Image>
+  <Image>
+    <ImageID>17</ImageID>
+    <Category>others</Category>
+    <Title>APRG</Title>
+    <Caption>http://www.aprg.com.au/</Caption>
+    <Path>../Image/portfolio/others/Thumb/aprg.jpg</Path>
+    <SortOrder>17</SortOrder>
+  </Image>
 </Images>
