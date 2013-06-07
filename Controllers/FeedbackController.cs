@@ -16,7 +16,7 @@ namespace JulhashWebsite.Controllers
 
         public ActionResult Index()
         {
-            var initialState = new [] {
+            var initialState = new[] {
                 new FeedbackModel {FirstName="", LastName="", Email="", Message=""}
                 };
 
@@ -25,15 +25,15 @@ namespace JulhashWebsite.Controllers
 
         [HttpPost]
         public ActionResult Index([FromJson] IEnumerable<FeedbackModel> feedbacks)
-        { 
+        {
 
             FeedbackModel feedbackModel = feedbacks.FirstOrDefault();
 
             //new EmailHelper().SendMail(feedbackModel.Email, "julhash.rahman@gmail.com", "", "Feedback from user", feedbackModel.Message);
-        
-     IRestResponse rest =   EmailHelper.SendSimpleMessage();
 
-       
+            IRestResponse rest = EmailHelper.SendSimpleMessage(feedbackModel.Email, "Feedback from " + feedbackModel.FirstName, feedbackModel.Message);
+
+
 
             ViewBag.Message = "You feedback has been sent successfully.";
 

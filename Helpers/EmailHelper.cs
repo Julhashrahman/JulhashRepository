@@ -43,7 +43,7 @@ namespace JulhashWebsite.Helpers
             return msg;
         }
 
-        public static IRestResponse SendSimpleMessage()
+        public static IRestResponse SendSimpleMessage(string from, string subject, string body)
         {
             RestClient client = new RestClient();
             client.BaseUrl = "https://api.mailgun.net/v2";
@@ -54,11 +54,11 @@ namespace JulhashWebsite.Helpers
             request.AddParameter("domain",
                                  "app17685.mailgun.org", ParameterType.UrlSegment);
             request.Resource = "{domain}/messages";
-            request.AddParameter("from", "Excited User <me@samples.mailgun.org>");
+            request.AddParameter("from", from);
             request.AddParameter("to", "julhash.rahman@gmail.com");
-            request.AddParameter("to", "julhash.rahman@gmail.com");
-            request.AddParameter("subject", "Hello");
-            request.AddParameter("text", "Testing some Mailgun awesomness!");
+            //request.AddParameter("to", "julhash.rahman@gmail.com");
+            request.AddParameter("subject", subject);
+            request.AddParameter("text", body);
             request.Method = Method.POST;
             return client.Execute(request);
         }
