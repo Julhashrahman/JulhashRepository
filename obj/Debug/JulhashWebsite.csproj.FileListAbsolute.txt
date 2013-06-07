@@ -15,6 +15,6 @@ D:\asp.net projects\JulhashWebsite\JulhashWebsite\bin\Ninject.dll
 D:\asp.net projects\JulhashWebsite\JulhashWebsite\bin\EntityFramework.xml
 D:\asp.net projects\JulhashWebsite\JulhashWebsite\bin\Ninject.pdb
 D:\asp.net projects\JulhashWebsite\JulhashWebsite\bin\Ninject.xml
-D:\asp.net projects\JulhashWebsite\JulhashWebsite\obj\Debug\ResolveAssemblyReference.cache
 D:\asp.net projects\JulhashWebsite\JulhashWebsite\obj\Debug\JulhashWebsite.dll
 D:\asp.net projects\JulhashWebsite\JulhashWebsite\obj\Debug\JulhashWebsite.pdb
+D:\asp.net projects\JulhashWebsite\JulhashWebsite\obj\Debug\JulhashWebsite.csprojResolveAssemblyReference.cache

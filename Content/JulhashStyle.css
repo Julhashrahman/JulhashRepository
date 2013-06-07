@@ -23,7 +23,9 @@ body { 	/* font-size: 0.625em; */	font-size:12px; }
 /*==================== END RESET STYLES =========================*/
 
 
-body {	text-align: left;	font-family: Trebuchet MS, Verdana, Sans-Serif;	background-color: #424242;		background-image: url(../Image/FreeVector-Floral-Tiles-Pattern.jpg);	padding-top: 77px; }
+body {	text-align: left;	font-family: Trebuchet MS, Verdana, Sans-Serif;	
+      	background-color: #797676; /* #424242;		 */
+      	background-image: url(../Image/FreeVector-Floral-Tiles-Pattern.jpg);	padding-top: 77px; }
 
 a
 {	color: #e71b95; }

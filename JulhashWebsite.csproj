@@ -41,6 +41,8 @@
       <HintPath>..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -75,13 +77,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EmailHelper.cs" />
     <Compile Include="Helpers\PaginatedList.cs" />
+    <Compile Include="Models\FeedbackModel.cs" />
+    <Compile Include="Models\FromJsonAttribute.cs" />
     <Compile Include="Models\JulhashRepository.cs" />
     <Compile Include="Models\Portfolio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Portfolio.xml" />
+    <Content Include="App_Data\Portfolio.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\global.css" />
     <Content Include="Content\JulhashStyle.css" />
     <Content Include="Content\MasterStyle.css" />
@@ -114,6 +121,7 @@
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\004-wood-melamine-subttle-pattern-background-pat.jpg" />
     <Content Include="Image\arrow-next.png" />
     <Content Include="Image\arrow-prev.png" />
     <Content Include="Image\background.png" />
@@ -125,13 +133,14 @@
     <Content Include="Image\container-bg.png" />
     <Content Include="Image\drape.png" />
     <Content Include="Image\example-frame.png" />
-    <Content Include="Image\FreeVector-Floral-Tiles-Pattern.jpg" />
+    <Content Include="Image\footerimage.png" />
     <Content Include="Image\ImageMetaData.xml" />
     <Content Include="Image\lightbox-blank.gif" />
     <Content Include="Image\lightbox-btn-close.gif" />
     <Content Include="Image\lightbox-btn-next.gif" />
     <Content Include="Image\lightbox-btn-prev.gif" />
     <Content Include="Image\lightbox-ico-loading.gif" />
+    <Content Include="Image\linkedin-icon.png" />
     <Content Include="Image\Lookout.jpg" />
     <Content Include="Image\MyCutImage1.png" />
     <Content Include="Image\MyCutImage2.png" />
@@ -139,6 +148,8 @@
     <Content Include="Image\pagination.png" />
     <Content Include="Image\pattern3.gif" />
     <Content Include="Image\pattern4.gif" />
+    <Content Include="Image\pattern4.jpg" />
+    <Content Include="Image\pattern9.png" />
     <Content Include="Image\Portfolio\Construction\Large\andeco_1.jpg" />
     <Content Include="Image\Portfolio\Construction\Large\andeco_2.jpg" />
     <Content Include="Image\Portfolio\Construction\Large\andeco_3.jpg" />
@@ -174,6 +185,7 @@
     <Content Include="Image\Portfolio\Recruitment\Large\BondWeb3.jpg" />
     <Content Include="Image\profession.png" />
     <Content Include="Image\Tilesbackground1.png" />
+    <Content Include="Image\twitter.png" />
     <Content Include="Image\under_construction.jpg" />
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
@@ -183,6 +195,8 @@
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Scripts\slides.min.jquery.js" />
@@ -237,6 +251,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
