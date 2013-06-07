@@ -26,11 +26,11 @@ namespace JulhashWebsite.Helpers
                 message.Subject = subject;
                 message.IsBodyHtml = true;
                 message.Body = body;
-                smtpClient.Host = "smtp.gmail.com";   // We use gmail as our smtp client
+                smtpClient.Host = "smtp.mailgun.org";   // We use gmail as our smtp client
                 smtpClient.Port = 587;
                 smtpClient.EnableSsl = true;
                 smtpClient.UseDefaultCredentials = true;
-                smtpClient.Credentials = new System.Net.NetworkCredential("julhash.rahman", "japlin80");
+                smtpClient.Credentials = new System.Net.NetworkCredential("postmaster@app17685.mailgun.org", "7x778e-84zt4");
 
                 smtpClient.Send(message);
                 msg = "Successful<br/>";

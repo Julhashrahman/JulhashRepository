@@ -1,0 +1,38 @@
+git push -u origin master
+
+
+
+https://github.com/Julhashrahman/JulhashRepository.git
+
+
+
+Create a new repository on the command line
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Julhashrahman/julhashrepository.git
+git push -u origin master
+Push an existing repository from the command line
+
+git remote add origin https://github.com/Julhashrahman/julhashrepository.git
+git push -u origin master
+
+
+//if merging issue
+
+git push -f
+
+//--------------------to update/commit to master repo--------//
+
+cd e:GitRepo
+
+git add *
+
+git commit -m "commit number"
+
+git push -u origin master
+
+
+//------------------------end------------------------------//
