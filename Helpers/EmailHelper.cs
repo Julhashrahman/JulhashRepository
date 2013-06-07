@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 //using System.Web.Mail;
 using System.Net.Mail;
+using RestSharp;
 
 namespace JulhashWebsite.Helpers
 {
@@ -27,7 +28,7 @@ namespace JulhashWebsite.Helpers
                 message.IsBodyHtml = true;
                 message.Body = body;
                 smtpClient.Host = "smtp.mailgun.org";   // We use gmail as our smtp client
-                smtpClient.Port = 587;
+                smtpClient.Port = 587;                
                 smtpClient.EnableSsl = true;
                 smtpClient.UseDefaultCredentials = true;
                 smtpClient.Credentials = new System.Net.NetworkCredential("postmaster@app17685.mailgun.org", "7x778e-84zt4");
@@ -40,6 +41,26 @@ namespace JulhashWebsite.Helpers
                 msg = ex.Message;
             }
             return msg;
+        }
+
+        public static IRestResponse SendSimpleMessage()
+        {
+            RestClient client = new RestClient();
+            client.BaseUrl = "https://api.mailgun.net/v2";
+            client.Authenticator =
+                    new HttpBasicAuthenticator("api",
+                                               "key-4cu69owqyama83tn5y6t-3fau9y2fm89");
+            RestRequest request = new RestRequest();
+            request.AddParameter("domain",
+                                 "app17685.mailgun.org", ParameterType.UrlSegment);
+            request.Resource = "{domain}/messages";
+            request.AddParameter("from", "Excited User <me@samples.mailgun.org>");
+            request.AddParameter("to", "julhash.rahman@gmail.com");
+            request.AddParameter("to", "julhash.rahman@gmail.com");
+            request.AddParameter("subject", "Hello");
+            request.AddParameter("text", "Testing some Mailgun awesomness!");
+            request.Method = Method.POST;
+            return client.Execute(request);
         }
 
     }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using JulhashWebsite.Models;
 using JulhashWebsite.Helpers;
+using RestSharp;
 
 namespace JulhashWebsite.Controllers
 {
@@ -28,8 +29,12 @@ namespace JulhashWebsite.Controllers
 
             FeedbackModel feedbackModel = feedbacks.FirstOrDefault();
 
-            new EmailHelper().SendMail(feedbackModel.Email, "julhash.rahman@gmail.com", "", "Feedback from user", feedbackModel.Message);
+            //new EmailHelper().SendMail(feedbackModel.Email, "julhash.rahman@gmail.com", "", "Feedback from user", feedbackModel.Message);
         
+     IRestResponse rest =   EmailHelper.SendSimpleMessage();
+
+       
+
             ViewBag.Message = "You feedback has been sent successfully.";
 
             return View(feedbacks);
