@@ -36,51 +36,137 @@
             }
         });
     });
-	</script>
-<div>
-   <div class="header">
-        Portfolio
-        <br />
-    <hr style="width:160px;" />
-        </div>
-    <div id="example">
-        @*		<img src="img/new-ribbon.png" width="112" height="112" alt="New Ribbon" id="ribbon">*@
-        <div id="slides">
-            <div class="slides_container">
-                @foreach (var item in Model)
-                {
-                    string itemPath = "";
-                    itemPath = @item.Path.Replace("Thumb", "Large");
-                     
-
-                    <div class="slide">
-                        <a href="http://www.flickr.com/photos/jliba/4665625073/" title="145.365 - Happy Bokeh Thursday! | Flickr - Photo Sharing!"
-                            target="_blank">
-                            <img src="@itemPath" width="570" height="270" alt="Slide 1">
-                        </a>
-                        <div class="caption" style="bottom: 0">
-                            <p>
-                                @item.Caption</p>
-                        </div>
-                    </div>
-                     
-                }
+</script>
+<!-- MAIN -->
+<div id="main">
+    <!-- wrapper-main -->
+    <div class="wrapper">
+        <!-- content -->
+        <div id="content">
+            <!-- title -->
+            <div id="page-title">
+                <span class="title">The Portfolio</span> <span class="subtitle">Some of my web development
+                    works</span>
             </div>
-            <a href="#" class="prev">
-                <img src="Image/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
-            <a href="#" class="next">
-                <img src="Image/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+            <!-- ENDS title -->
+            <!-- filter -->
+            <ul class="filter">
+                <li>Categories</li>
+                <li class="active"><a href="#">E-Commerce </a></li>
+                <li ><a href="#">Real Estate </a></li>
+                <li><a href="#">Logistics </a></li>
+                <li><a href="#">Educational </a></li>
+                <li><a href="#">Recruitment </a></li>
+                <li><a href="#">Informative </a></li>
+            </ul>
+            <!-- ENDS filter -->
+            <!-- Portfolio -->
+            <div id="projects-list">
+                <table>
+                    <tr>
+                        <td>
+                            @{
+                                string itemPath = "";
+                                itemPath = @Model[0].Path.Replace("Thumb", "Large");
+                            }
+                            <!-- project -->
+                            <div class="project">
+                                <h1>
+                                    <a href="@Model[0].Caption">@Model[0].Title</a></h1>
+                                <!-- shadow -->
+                                <div class="project-shadow">
+                                    <!-- project-thumb -->
+                                    <div class="project-thumbnail">
+                                        <!-- meta -->
+                                        <ul class="meta">
+                                            <li><strong>Project date</strong> </li>
+                                            <li><strong>Client</strong>&nbsp; @Model[0].Title </li>
+                                            <li><strong>Visit website</strong> <a href="#">@Model[0].Caption</a></li>
+                                        </ul>
+                                        <!-- ENDS meta -->
+                                        <a href="project.html" class="cover">
+                                            <img src="@itemPath" alt="@Model[0].Title" /></a>
+                                    </div>
+                                    <!-- ENDS project-thumb -->
+                                    <div class="the-excerpt">
+                                        @Model[0].Description
+                                    </div>
+                                    <a href="/Project" class="read-more link-button"><span>View project</span></a>
+                                </div>
+                                <!-- ENDS shadow -->
+                            </div>
+                            <!-- ENDS project -->
+                        </td>
+                       @if (Model.Count > 1)
+                       {
+                        <td>
+                            @{
+                           string itemPath2 = "";
+                           itemPath2 = @Model[1].Path.Replace("Thumb", "Large");
+                            }
+                            <!-- project -->
+                            <div class="project">
+                                <h1>
+                                    <a href="@Model[1].Caption">@Model[1].Title</a></h1>
+                                <!-- shadow -->
+                                <div class="project-shadow">
+                                    <!-- project-thumb -->
+                                    <div class="project-thumbnail">
+                                        <!-- meta -->
+                                        <ul class="meta">
+                                            <li><strong>Project date</strong> </li>
+                                            <li><strong>Client</strong>&nbsp; @Model[1].Title </li>
+                                            <li><strong>Visit website</strong> <a href="#">@Model[1].Caption</a></li>
+                                        </ul>
+                                        <!-- ENDS meta -->
+                                        <a href="project.html" class="cover">
+                                            <img src="@itemPath2" alt="@Model[1].Title" /></a>
+                                    </div>
+                                    <!-- ENDS project-thumb -->
+                                    <div class="the-excerpt">
+                                         @Model[1].Description
+                                    </div>
+                                    <a href="/Project" class="read-more link-button"><span>View project</span></a>
+                                </div>
+                                <!-- ENDS shadow -->
+                            </div>
+                            <!-- ENDS project -->
+                        </td>
+                       }
+                       
+                    </tr>
+                 
+                </table>
+            </div>
+            <!-- ENDS Portfolio -->
+            <!-- pagination -->
+            <div class="clear">
+            </div>
+            <ul class='pager'>
+                @if (Model.HasPreviousPage)
+                {      
+                    <li>@Html.ActionLink("<<", "Index", new { page = (Model.PageIndex - 1) }) </li>    
+                }
+                @if (@Model.HasNextPage)
+                {
+                    <li>@Html.ActionLink(">>", "Index", new { page = (Model.PageIndex + 1) })</li>
+                }
+
+@*
+                <li class='first-page'><a href='#'>&laquo;</a></li>
+                <li><a href='#'>&lsaquo;</a></li>
+                <li><a href='#'>2</a></li>
+                <li><a href='#'>3</a></li>
+                <li class='active'><a href='#'>4</a></li>
+                <li><a href='#'>5</a></li>
+                <li><a href='#'>6</a></li>
+                <li><a href='#'>&rsaquo;</a></li>
+                <li class='last-page'><a href='#'>&raquo;</a></li>*@
+            </ul>
+            <!-- ENDS pagination -->
         </div>
-        <img src="Image/example-frame.png" width="739" height="341" alt="Example Frame" id="frame">
+        <!-- ENDS content -->
     </div>
-  @*  @if (Model.HasPreviousPage)
-    {      
-        @Html.ActionLink("<<<", "Index", new { page = (Model.PageIndex - 1) })
-     
-    }
-    &nbsp;|&nbsp;
-    @if (@Model.HasNextPage)
-    {
-        @Html.ActionLink(">>>", "Index", new { page = (Model.PageIndex + 1) })
-    }*@
+    <!-- ENDS wrapper-main -->
 </div>
+<!-- ENDS MAIN -->

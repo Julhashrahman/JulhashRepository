@@ -6,38 +6,51 @@
     <Title>Infotrack</Title>
     <Caption>http://www.infotrack.com.au/</Caption>
     <Path>../Image/portfolio/others/Thumb/infotrack.jpg</Path>
+    <Description>
+      This website was made of ASP.NET 4, C#, ASP.NET MVC3, Telerik Frameworks, LINQ,
+      XML, XSLT, XSD, AJAX, WCF, XHTML, DHTML, Razor, CSS, SQL SERVER 2008, JQuery, MVVM
+      and Module Pattern Javascript, KnockoutJS. TFS(Team Foundation Server) was used
+      to control the project version. Agile Methodologies(SCRUM) was used. Mainly worked
+      on Pre-Purchase Reports, NSW Property Certificates, eNOS, WA Landgate title search,
+      Vic title alert, CRR Search, Property Enquiries, NSW LPI etc.
+    </Description>
     <SortOrder>1</SortOrder>
   </Image>
   <Image>
     <ImageID>2</ImageID>
     <Category>recr</Category>
-    <Title>Bond International[http://www.bondadapt.com]</Title>
+    <Title>Stellar Recruitment</Title>
     <Caption>http://www.stellarrecruitment.com.au/</Caption>
-    <Path>../Image/portfolio/Recruitment/Thumb/BondWeb1.jpg</Path>
+    <Path>../Image/portfolio/Recruitment/Thumb/Stellar1.jpg</Path>
+    <Description>
+      Client:Stellar Recruitment, Company: Bond International Software Ltd. 
+      ASP.NET 4.0, C#, LINQ, XML, XSLT, AJAX, Web Services, XHTML, DHTML, CSS, SQL Server 2008, JQuery,
+      JavaScript, Crystal Report 2010, Business Object Explorer, Query Explorer, Screen Design Tools etc.
+      Main features involved Candidate Registration, CV upload and auto-field fill-up and mapping mechanism,
+      Front-end look and feel, timesheet management etc
+    </Description>
     <SortOrder>2</SortOrder>
   </Image>
   <Image>
     <ImageID>3</ImageID>
     <Category>recr</Category>
-    <Title>Bond International[http://www.bondadapt.com]</Title>
+    <Title>Medic Oncall</Title>
     <Caption>http://www.mediconcall.com.au/</Caption>
-    <Path>../Image/portfolio/Recruitment/Thumb/BondWeb2.jpg</Path>
-    <SortOrder>3</SortOrder>
-  </Image>
-  <Image>
-    <ImageID>3</ImageID>
-    <Category>recr</Category>
-    <Title>Bond International[http://www.bondadapt.com]</Title>
-    <Caption>http://www.920.co.nz/</Caption>
-    <Path>../Image/portfolio/Recruitment/Thumb/BondWeb3.jpg</Path>
+    <Path>../Image/portfolio/Recruitment/Thumb/MedicOnCall1.jpg</Path>
+    <Description>
+      Updating soon...
+    </Description>
     <SortOrder>3</SortOrder>
   </Image>
   <Image>
     <ImageID>4</ImageID>
-    <Category>ecommerce</Category>
-    <Title>LoveID</Title>
-    <Caption>http://www.loveid.com/</Caption>
-    <Path>../Image/portfolio/Ecommerce/Thumb/loveid_1.jpg</Path>
+    <Category>recr</Category>
+    <Title>NineTwenty Recruitment</Title>
+    <Caption>http://www.920.co.nz/</Caption>
+    <Path>../Image/portfolio/Recruitment/Thumb/NineTwenty1.jpg</Path>
+    <Description>
+      Updating soon...
+    </Description>
     <SortOrder>4</SortOrder>
   </Image>
   <Image>
@@ -45,15 +58,22 @@
     <Category>ecommerce</Category>
     <Title>LoveID</Title>
     <Caption>http://www.loveid.com/</Caption>
-    <Path>../Image/portfolio/Ecommerce/Thumb/loveid_2.jpg</Path>
+    <Path>../Image/portfolio/Ecommerce/Thumb/loveid_1.jpg</Path>
+    <Description>
+      Updating soon...
+    </Description>
     <SortOrder>5</SortOrder>
   </Image>
+  
   <Image>
     <ImageID>6</ImageID>
     <Category>informative</Category>
     <Title>Widex</Title>
     <Caption>http://www.widex.com.au/</Caption>
     <Path>../Image/portfolio/Informative/Thumb/widex_1.jpg</Path>
+    <Description>
+      Updating soon...
+    </Description>
     <SortOrder>6</SortOrder>
   </Image>
   <Image>
@@ -62,6 +82,9 @@
     <Title>Bluestar</Title>
     <Caption>http://www.bluestarlogistics.com.au/</Caption>
     <Path>../Image/portfolio/Logistics/Thumb/onlinedispatchsystem.jpg</Path>
+    <Description>
+      Updating soon...
+    </Description>
     <SortOrder>7</SortOrder>
   </Image>
   <Image>
@@ -70,6 +93,9 @@
     <Title>Booktopia</Title>
     <Caption>Booktopia</Caption>
     <Path>../Image/portfolio/Ecommerce/Thumb/booktopia.jpg</Path>
+    <Description>
+      Updating soon...
+    </Description>
     <SortOrder>8</SortOrder>
   </Image>
   <Image>
@@ -78,70 +104,31 @@
     <Title>Shakespearegrove</Title>
     <Caption>Shakespeargrove</Caption>
     <Path>../Image/portfolio/Realestate/Thumb/shakespeare_1.jpg</Path>
+    <Description>
+      Updating soon...
+    </Description>
     <SortOrder>9</SortOrder>
   </Image>
   <Image>
     <ImageID>10</ImageID>
-    <Category>realstate</Category>
-    <Title>Shakespearegrove</Title>
-    <Caption>Shakespeargrove</Caption>
-    <Path>../Image/portfolio/Realestate/Thumb/shakespeare_2.jpg</Path>
-    <SortOrder>10</SortOrder>
-  </Image>
-  <Image>
-    <ImageID>11</ImageID>
-    <Category>realstate</Category>
-    <Title>Shakespearegrove</Title>
-    <Caption>Shakespeargrove</Caption>
-    <Path>../Image/portfolio/Realestate/Thumb/shakespeare_3.jpg</Path>
-    <SortOrder>11</SortOrder>
-  </Image>
-  <Image>
-    <ImageID>12</ImageID>
-    <Category>realstate</Category>
-    <Title>Shakespearegrove</Title>
-    <Caption>Shakespeargrove</Caption>
-    <Path>../Image/portfolio/Realestate/Thumb/shakespeare_4.jpg</Path>
-    <SortOrder>12</SortOrder>
-  </Image>
-  <Image>
-    <ImageID>13</ImageID>
     <Category>construction</Category>
     <Title>Andeco Group</Title>
     <Caption>http://www.andecogroup.com.au/</Caption>
     <Path>../Image/portfolio/Construction/Thumb/andeco_1.jpg</Path>
-    <SortOrder>13</SortOrder>
+    <Description>
+      Updating soon...
+    </Description>
+    <SortOrder>10</SortOrder>
   </Image>
   <Image>
-    <ImageID>14</ImageID>
-    <Category>construction</Category>
-    <Title>Andeco Group</Title>
-    <Caption>http://www.andecogroup.com.au/</Caption>
-    <Path>../Image/portfolio/Construction/Thumb/andeco_2.jpg</Path>
-    <SortOrder>14</SortOrder>
-  </Image>
-  <!--<Image>
-    <ImageID>15</ImageID>
-    <Category>ecommerce</Category>
-    <Title>AussieBangla</Title>
-    <Caption>AussieBangla</Caption>
-    <Path>../Image/portfolio/Ecommerce/Thumb/aussiebanglagift_1.jpg</Path>
-    <SortOrder>15</SortOrder>
-  </Image>
-  <Image>
-    <ImageID>16</ImageID>
-    <Category>ecommerce</Category>
-    <Title>AussieBangla</Title>
-    <Caption>AussieBangla</Caption>
-    <Path>../Image/portfolio/Ecommerce/Thumb/aussiebanglagift_2.jpg</Path>
-    <SortOrder>16</SortOrder>
-  </Image>-->
-  <Image>
-    <ImageID>15</ImageID>
+    <ImageID>11</ImageID>
     <Category>others</Category>
     <Title>APRG</Title>
     <Caption>http://www.aprg.com.au/</Caption>
     <Path>../Image/portfolio/others/Thumb/aprg.jpg</Path>
-    <SortOrder>17</SortOrder>
+    <Description>
+      Updating soon...
+    </Description>
+    <SortOrder>11</SortOrder>
   </Image>
 </Images>
