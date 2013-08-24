@@ -59,14 +59,54 @@
     <Path03>../../Image/Project/Bond/Thumb/03.jpg</Path03>
     <Path04>../../Image/Project/Bond/Thumb/04.jpg</Path04>
     <Description>
-      Technologies used: ASP.NET 4.0, C#, 3 Tier Architecture, Component Art Framework, LINQ, XML, XSLT, Web Services, ASP.NET Web API for Single Sign On and Integration, AJAX, JQuery,
-      XHTML, CSS, twitter Bootstrap, SQL Server 2008, TortoiseSVN, WinMerge, Classic ASP, Crystal Report 8, Onyx CRM etc
+      Bond International Software provide software solutions for recruitment consultancies and corporations.
 
-      <p>Development Methodology : Agile Methodologies(SCRUM) was used</p>
+      I was assigned to develop their core product using cutting-edge technologies. The technologies I have used
+      are ASP.NET 4.0, c#, LINQ, XML, XSLT, AJAX, Web Services, XHTML, CSS, JQuery, SQL Server 2005 and 2008,
+      Javascript, Crystal Report 2010, CRM(ADAPT), Business Object Explorer, Query Explorer, Screen Design Tools, Classic ASP,
+      Java(JSP).
+
+      Core product[e-recruitment] development involved Candidate Registration, Job listing and Searching, CV upload mechanism,
+      extracting  CV to the corresponding fields, Front-end look and feel, timesheet management etc. This core product
+      was embedded to all the client's portal and did necessary modification based on each of the clients requirements,
+      sometimes I have even added new features which are specific to some clients requirements. I have also branded this
+      core product based on the client's portal look and feel.
 
 
 
     </Description>
   </Project>
-  
+
+  <Project>
+    <ID>4</ID>
+    <Title>LoveID</Title>
+    <Path01>../../Image/Project/LoveID/Thumb/01.jpg</Path01>
+    <Path02>../../Image/Project/LoveID/Thumb/02.jpg</Path02>
+    <Path03>../../Image/Project/LoveID/Thumb/03.jpg</Path03>
+    <Path04>../../Image/Project/LoveID/Thumb/04.jpg</Path04>
+    <Description>
+      To develop this website I have used ASP.NET 3.5 using  C# , XML, XSL,AJAX, Web services,
+      DHTML, HTML, CSS, SQL Server-2008, JavaScript, JQuery. o	Task included Creating Shopping Cart
+      and Implementing Payment System for it, Member Profile and Recurring Billing Cycle in Express
+      Checkout for subscription, Point Based Payment System,  Role Based Membership, Custom Content
+      Management System, QR(Quick Response) Code generation for mobile device, Creating, Resizing,
+      Cropping images  and printing in PDF file, E-mail Notification, Creating Pie Chart of Online User
+      Statistics and frequent use of some features and generating CSV(Comma Separated Value) file to
+      download the report as well, Using LINQ to SQL Classes, Stored Procedures, Invoicing, Using JQuery
+      to have some controls in Front End such as accordion, T-SQL in SQL Server 2008.
+    </Description>
+  </Project>
+  <Project>
+    <ID>5</ID>
+    <Title>Shakespeare</Title>
+    <Path01>../../Image/Project/shakespeare/Thumb/01.jpg</Path01>
+    <Path02>../../Image/Project/shakespeare/Thumb/02.jpg</Path02>
+    <Path03>../../Image/Project/shakespeare/Thumb/03.jpg</Path03>
+    <Path04>../../Image/Project/shakespeare/Thumb/04.jpg</Path04>
+    <Description>
+      This digital Ad I have created using Action Script 2.0, PHP, HTML, CSS, Flash, Photoshop, Illustrator,
+      Javascript. This was done for one of the real estate in Melboure called Shakespearegrove.
+    </Description>
+  </Project>
+
 </Projects>

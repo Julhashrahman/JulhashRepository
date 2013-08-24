@@ -19,7 +19,7 @@
   </Image>
   <Image>
     <ImageID>2</ImageID>
-    <Category>ecommerce</Category>
+    <Category>ecommerce onlineeducation</Category>
     <Title>Kaplan Australia Pty Ltd</Title>
     <Caption>http://forms.kaplan.edu.au</Caption>
     <ProjectDate>July,2013</ProjectDate>
@@ -29,7 +29,7 @@
       XML, XSLT, XSD, AJAX, Rest API(Single Sign On and Integration with LMS[Learning Management System]),
       HTML5, XHTML, DHTML, CSS3, SQL SERVER 2008, JQuery, TortoiseSVN was used
       to control the project version. Agile Methodologies(SCRUM) was used to do further development. Custom CMS where administrator can manage student's enrolment, promocode,
-      course details, student's personal details, exam booking, project booking etc
+      course details, student's personal details, exam booking, project booking etc.
     </Description>
     <SortOrder>2</SortOrder>
   </Image>
@@ -39,16 +39,58 @@
     <Title>Bond International Software Pty Ltd</Title>
     <Caption>http://www.bondinternationalsoftware.com/</Caption>
     <ProjectDate>June,2010</ProjectDate>
-    <Path>../../Image/portfolio/Recruitment/Thumb/Stellar1.jpg</Path>
+    <Path>../../Image/portfolio/Recruitment/Thumb/Bond.jpg</Path>
     <Description>
-      Client:Stellar Recruitment, Company: Bond International Software Ltd.
-      ASP.NET 4.0, C#, LINQ, XML, XSLT, AJAX, Web Services, XHTML, DHTML, CSS, SQL Server 2008, JQuery,
-      JavaScript, Crystal Report 2010, Business Object Explorer, Query Explorer, Screen Design Tools etc.
-      Main features involved Candidate Registration, CV upload and auto-field fill-up and mapping mechanism,
-      Front-end look and feel, timesheet management etc
+      Bond International Software provide software solutions for recruitment consultancies and corporations.
+      
+      I was assigned to develop their core product using cutting-edge technologies. The technologies I have used 
+      are ASP.NET 4.0, c#, LINQ, XML, XSLT, AJAX, Web Services, XHTML, CSS, JQuery, SQL Server 2005 and 2008, 
+      Javascript, Crystal Report 2010, CRM(ADAPT), Business Object Explorer, Query Explorer, Screen Design Tools, Classic ASP, 
+      Java(JSP). 
+      
+      Core product[e-recruitment] development involved Candidate Registration, Job listing and Searching, CV upload mechanism,
+      extracting  CV to the corresponding fields, Front-end look and feel, timesheet management etc. This core product 
+      was embedded to all the client's portal and did necessary modification based on each of the clients requirements, 
+      sometimes I have even added new features which are specific to some clients requirements. I have also branded this 
+      core product based on the client's portal look and feel. 
+      
     </Description>
     <SortOrder>3</SortOrder>
   </Image>
+  <Image>
+    <ImageID>4</ImageID>
+    <Category>ecommerce</Category>
+    <Title>LoveID</Title>
+    <Caption>http://www.loveid.com/</Caption>
+    <ProjectDate>September,2010</ProjectDate>
+    <Path>../../Image/portfolio/Ecommerce/Thumb/loveid_1.jpg</Path>
+    <Description>
+      To develop this website I have used ASP.NET 3.5 using  C# , XML, XSL,AJAX, Web services,
+      DHTML, HTML, CSS, SQL Server-2008, JavaScript, JQuery. o	Task included Creating Shopping Cart 
+      and Implementing Payment System for it, Member Profile and Recurring Billing Cycle in Express 
+      Checkout for subscription, Point Based Payment System,  Role Based Membership, Custom Content 
+      Management System, QR(Quick Response) Code generation for mobile device, Creating, Resizing, 
+      Cropping images  and printing in PDF file, E-mail Notification, Creating Pie Chart of Online User 
+      Statistics and frequent use of some features and generating CSV(Comma Separated Value) file to 
+      download the report as well, Using LINQ to SQL Classes, Stored Procedures, Invoicing, Using JQuery
+      to have some controls in Front End such as accordion, T-SQL in SQL Server 2008.
+    </Description>
+    <SortOrder>4</SortOrder>
+  </Image>
+  <Image>
+    <ImageID>5</ImageID>
+    <Category>digitalads</Category>
+    <Title>Shakespearegrove</Title>
+    <Caption>Not Live Anymore</Caption>
+    <ProjectDate>October,2009</ProjectDate>
+    <Path>../../Image/Portfolio/DigitalAds/Thumb/shakespeare.jpg</Path>
+    <Description>
+      This digital Ad I have created using Action Script 2.0, PHP, HTML, CSS, Flash, Photoshop, Illustrator,
+      Javascript. This was done for one of the real estate in Melboure called Shakespearegrove.
+    </Description>
+    <SortOrder>5</SortOrder>
+  </Image>
+  
   
   <!--<Image>
     <ImageID>3</ImageID>
