@@ -596,7 +596,11 @@ h6{ font-size: 20px; }
 #content .project-column .meta a:hover{ background: #000;}
 
 .project-column .project-title{
-	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.project-column p{
+	color: red;
 }
 
 .project-column .portfolio-left-shadow{

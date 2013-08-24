@@ -52,12 +52,13 @@
             <!-- filter -->
             <ul class="filter">
                 <li>Categories</li>
-                <li class="active"><a href="#">E-Commerce </a></li>
-                <li ><a href="#">Real Estate </a></li>
-                <li><a href="#">Logistics </a></li>
-                <li><a href="#">Educational </a></li>
-                <li><a href="#">Recruitment </a></li>
-                <li><a href="#">Informative </a></li>
+                @*<li class="active"><a href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce </a></li>*@
+                <li ><a href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce </a></li>
+                <li ><a href="/Portfolio/Index/?page=&category=digitalads">Digital Ads </a></li>
+                <li><a href="/Portfolio/Index/?page=&category=logistics">Logistics </a></li>
+                <li><a href="/Portfolio/Index/?page=&category=onlineeducation">Online-Education </a></li>
+                <li><a href="/Portfolio/Index/?page=&category=erecruitment">E-Recruitment </a></li>
+                <li><a href="/Portfolio/Index/?page=&category=informative">Informative </a></li>
             </ul>
             <!-- ENDS filter -->
             <!-- Portfolio -->
@@ -79,19 +80,19 @@
                                     <div class="project-thumbnail">
                                         <!-- meta -->
                                         <ul class="meta">
-                                            <li><strong>Project date</strong> </li>
+                                            <li><strong>Project date</strong>&nbsp;@Model[0].ProjectDate  </li>
                                             <li><strong>Client</strong>&nbsp; @Model[0].Title </li>
                                             <li><strong>Visit website</strong> <a href="#">@Model[0].Caption</a></li>
                                         </ul>
                                         <!-- ENDS meta -->
                                         <a href="project.html" class="cover">
-                                            <img src="@itemPath" alt="@Model[0].Title" /></a>
+                                            <img src="@Url.Content(@itemPath)" alt="@Model[0].Title" /></a>
                                     </div>
                                     <!-- ENDS project-thumb -->
                                     <div class="the-excerpt">
                                         @Model[0].Description
                                     </div>
-                                    <a href="/Project" class="read-more link-button"><span>View project</span></a>
+                                    <a href="/Project/index/@Model[0].ID" class="read-more link-button"><span>View project</span></a>
                                 </div>
                                 <!-- ENDS shadow -->
                             </div>
@@ -110,23 +111,23 @@
                                     <a href="@Model[1].Caption">@Model[1].Title</a></h1>
                                 <!-- shadow -->
                                 <div class="project-shadow">
-                                    <!-- project-thumb -->
                                     <div class="project-thumbnail">
+                                    <!-- project-thumb -->
                                         <!-- meta -->
                                         <ul class="meta">
-                                            <li><strong>Project date</strong> </li>
+                                            <li><strong>Project date</strong>&nbsp;@Model[1].ProjectDate  </li>
                                             <li><strong>Client</strong>&nbsp; @Model[1].Title </li>
                                             <li><strong>Visit website</strong> <a href="#">@Model[1].Caption</a></li>
                                         </ul>
                                         <!-- ENDS meta -->
                                         <a href="project.html" class="cover">
-                                            <img src="@itemPath2" alt="@Model[1].Title" /></a>
+                                            <img src="@Url.Content(@itemPath2)" alt="@Model[1].Title" /></a>
                                     </div>
                                     <!-- ENDS project-thumb -->
                                     <div class="the-excerpt">
                                          @Model[1].Description
                                     </div>
-                                    <a href="/Project" class="read-more link-button"><span>View project</span></a>
+                                    <a href="/Project/index/@Model[1].ID" class="read-more link-button"><span>View project</span></a>
                                 </div>
                                 <!-- ENDS shadow -->
                             </div>

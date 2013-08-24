@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Projects>
+  <Project>
+    <ID>1</ID>
+    <Title>Infotrack</Title>
+    <Path01>../../Image/Project/Infotrack/Thumb/01.jpg</Path01>
+    <Path02>../../Image/Project/Infotrack/Thumb/02.jpg</Path02>
+    <Path03>../../Image/Project/Infotrack/Thumb/03.jpg</Path03>
+    <Path04>../../Image/Project/Infotrack/Thumb/04.jpg</Path04>
+    <Description>
+      Technologies used : ASP.NET 3.5, 4.0, C#, ASP.NET MVC4, Entity Framework 4.5, Telerik Frameworks, LINQ,
+      XML, XSLT, XSD, AJAX, WCF,HTML5, CSS3[image sprites and other forms element styling] , XHTML, DHTML, Razor, SQL SERVER 2008, JQuery, ABCPdf,  MVVM
+      and Module Pattern Javascript, KnockoutJS. TFS(Team Foundation Server), Dependency Injection[IInject], MS Unit Test, WinMerge etc.
+
+      <p>Development Methodology : Agile Methodologies(SCRUM) was used</p>
+
+      <p>
+        Back-End Development Involved : Optimized and used best practises such as using Dependency Injection and better OOP approach such as Pablos SOLID Principles with vastly used design pattern such as
+        MVC, Factory Pattern, Facade pattern of the existing code. Modified and fixed exisitng stored procedure and used LINQ for any new queries. Mapped and auto-filled records for existing users.
+        worked on Integration between Command Point,which is a Desktop[Winform] Application, to web application[Infortrack]. Modified and added new features in WinForm application[CommandPoint] as well. Worked on Delivery System made of WCF and these are mainly used to get information
+        from Government Online Resources. Samples are available in the image gallery. Created and modified variety of certificates those will be generated on the fly when client orders for them. I have
+        used ABCPDF to generate those certificates. I have also implemented advanced search option.
+      </p>
+
+      <p>
+        front-End Development Involved:  Branding core product[Infotrack] using best approach of the latest technologies and JavaScript design pattern[MVVM - KnockoutJS, Module Pattern]. Image sprites,
+        Slicing and resizing images, choosing colors and design to have better look and feel of the core products as well as all the retailers such as www.superfastcomputersearch.com.au, www.sydneylegalagents.com.au, www.service1st.com.au etc.
+      </p>
+
+      <p>
+        Features and Maintenance: Migrated asp.net 3.5 to asp.net 4 (MVC 4) of some of the projects. Pricing and Payment mechanism [ePAY],  Modification and bug fixed
+        for Pre-Purchase Reports, NSW Property Certificates, eNOS, WA Landgate title search,
+        Vic title alert, CRR Search, Property Enquiries, NSW LPI etc. Beside development, I used to do 3rd level help desk support and liaise with client directly on the issues and change requests.
+      </p>
+    </Description>
+  </Project>
+  <Project>
+    <ID>2</ID>
+    <Title>Kaplan Australia</Title>
+    <Path01>../../Image/Project/Kaplan/Thumb/01.jpg</Path01>
+    <Path02>../../Image/Project/Kaplan/Thumb/02.jpg</Path02>
+    <Path03>../../Image/Project/Kaplan/Thumb/03.jpg</Path03>
+    <Path04>../../Image/Project/Kaplan/Thumb/04.jpg</Path04>
+    <Description>
+      Technologies used: ASP.NET 4.0, C#, 3 Tier Architecture, Component Art Framework, LINQ, XML, XSLT, Web Services, ASP.NET Web API for Single Sign On and Integration, AJAX, JQuery,
+      XHTML, CSS, twitter Bootstrap, SQL Server 2008, TortoiseSVN, WinMerge, Classic ASP, Crystal Report 8, Onyx CRM etc 
+      
+      <p>Development Methodology : Agile Methodologies(SCRUM) was used</p>
+      
+      
+
+  </Description>
+  </Project>
+  <Project>
+    <ID>3</ID>
+    <Title>Bond International</Title>
+    <Path01>../../Image/Project/Bond/Thumb/01.jpg</Path01>
+    <Path02>../../Image/Project/Bond/Thumb/02.jpg</Path02>
+    <Path03>../../Image/Project/Bond/Thumb/03.jpg</Path03>
+    <Path04>../../Image/Project/Bond/Thumb/04.jpg</Path04>
+    <Description>
+      Technologies used: ASP.NET 4.0, C#, 3 Tier Architecture, Component Art Framework, LINQ, XML, XSLT, Web Services, ASP.NET Web API for Single Sign On and Integration, AJAX, JQuery,
+      XHTML, CSS, twitter Bootstrap, SQL Server 2008, TortoiseSVN, WinMerge, Classic ASP, Crystal Report 8, Onyx CRM etc
+
+      <p>Development Methodology : Agile Methodologies(SCRUM) was used</p>
+
+
+
+    </Description>
+  </Project>
+  
+</Projects>

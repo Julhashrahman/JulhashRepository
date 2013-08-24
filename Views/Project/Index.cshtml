@@ -1,4 +1,5 @@
-﻿@{
+﻿@model JulhashWebsite.Models.Portfolio
+@{
     ViewBag.Title = "Index";
 }
 <!-- MAIN -->
@@ -16,25 +17,31 @@
             <!-- filter -->
             <ul class="filter">
                 <li>Categories</li>
-                <li class="active"><a href="#">E-Commerce </a></li>
-                <li><a href="#">Real Estate </a></li>
-                <li><a href="#">Logistics </a></li>
-                <li><a href="#">Educational </a></li>
-                <li><a href="#">Recruitment </a></li>
-                <li><a href="#">Informative </a></li>
+                @*<li class="active"><a href="#">E-Commerce </a></li>*@
+                        <li><a href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce</a></li>
+                        <li><a href="/Portfolio/Index/?page=&category=digitalads">Digital Ads</a></li>
+                        <li><a href="/Portfolio/Index/?page=&category=logistics">Logistics</a></li>
+                        <li><a href="/Portfolio/Index/?page=&category=erecruitment">Online-Education</a></li>
+                        <li><a href="/Portfolio/Index/?page=&category=erecruitment">E-Recruitment</a></li>
+                        <li><a href="/Portfolio/Index/?page=&category=informative">Informative </a></li>
             </ul>
             <!-- ENDS filter -->
-            <!-- project column (left)-->
+            <!-- project column (left)-->   
             <div class="project-column">
                 <!-- shadow -->
                 <div class="project-shadow">
+                 @{
+                                string itemPath = "";
+                                itemPath = @Model.Path.Replace("Thumb", "Large");
+                            }
                     <div class="project-thumbnail">
-                        <img src="img/dummies/438x267.gif" alt="Feature image" /></div>
+
+                         <img src="@Url.Content(@itemPath)" alt="@Model.Title" /></div>
                     <!-- meta -->
                     <ul class="meta">
-                        <li><strong>Project date</strong>  </li>
-                        <li><strong>Client</strong> </li>
-                        <li><strong>Visit website</strong></li>
+                        <li><strong>Project date</strong>&nbsp; @Model.ProjectDate  </li>
+                        <li><strong>Client</strong> &nbsp; @Model.Title </li>
+                        <li><strong>Visit website</strong>&nbsp; @Model.Caption</li>
                     </ul>
                     <!-- ENDS meta -->
                     <div class="portfolio-left-shadow">
@@ -44,15 +51,16 @@
                 <!-- project gallery -->
                 <h2>
                     Project gallery</h2>
+
                 <ul class="project-gallery">
-                    <li><a href="img/dummies/204x148.gif" class="fancybox">
-                        <img src="img/dummies/204x148.gif" alt="Pic"></a></li>
-                    <li><a href="img/dummies/204x148.gif" class="fancybox">
-                        <img src="img/dummies/204x148.gif" alt="Pic"></a></li>
-                    <li><a href="img/dummies/204x148.gif" class="fancybox">
-                        <img src="img/dummies/204x148.gif" alt="Pic"></a></li>
-                    <li><a href="img/dummies/204x148.gif" class="fancybox">
-                        <img src="img/dummies/204x148.gif" alt="Pic"></a></li>
+                    <li><a href='@Model.Project.Path01.Replace("Thumb","Large")' class="fancybox">
+                        <img src="@Model.Project.Path01" alt="Infotrack"></a></li>
+                    <li><a href="@Model.Project.Path02.Replace("Thumb","Large")" class="fancybox">
+                        <img src="@Model.Project.Path02" alt="Infotrack"></a></li>
+                    <li><a href="@Model.Project.Path03.Replace("Thumb","Large")" class="fancybox">
+                        <img src="@Model.Project.Path03" alt="Infotrack"></a></li>
+                    <li><a href="@Model.Project.Path04.Replace("Thumb","Large")" class="fancybox">
+                        <img src="@Model.Project.Path04" alt="Infotrack"></a></li>
                 </ul>
                 <!-- ENDS project gallery -->
             </div>
@@ -60,8 +68,8 @@
             <!--project column (right) -->
             <div class="project-column">
                 <h1 class="project-title">
-                    Updating soon...</h1>
-                Updating soon...
+                    @Model.Title</h1>
+                @Model.Project.Description
             </div>
             <div class="clear">
             </div>
