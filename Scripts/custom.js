@@ -297,6 +297,20 @@ jQuery(document).ready(function($) {
 		$(this).children('a').stop().animate({marginLeft: "0"}, "fast");
 	});
 		
+
+
+	
+
+	$(window).resize(function () {
+
+	    /* do something */
+	    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+	    console.log(width);
+
+	});
+
+
 //close			
 });
 	
