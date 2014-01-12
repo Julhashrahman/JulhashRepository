@@ -27,7 +27,7 @@
 
 
 body {
-	line-height: 1;
+	line-height: 1.5em;
 	color: #51565b;
 	background: #f1f1f1 url(../../img/bg/patterns/noise.png);
 	font-family: Arial, Helvetica, sans-serif;
@@ -249,7 +249,7 @@ body {
 	overflow: hidden;
 	height: 103px;
 	margin-bottom: 30px;
-	background:  url(../../img/tabs-divider.png) repeat-x bottom center;
+	background:  url(../../img/tabs-divider.png) no-repeat bottom center;
 	text-shadow: 1px 1px rgba(255, 255, 255, 1);
 }
 
@@ -258,7 +258,7 @@ body {
 	float: left;
 	font-family: 'Ubuntu', arial, serif;
 	font-size: 40px;
-	line-height: 103px;
+	line-height: 100px;
 	margin-left: 30px;
 }
 
@@ -354,7 +354,7 @@ h6{ font-size: 20px; }
 
 /* FILTER --------------------------------------------------------*/
 
-#content .filter{
+ .filter{
 	display: block;
 	overflow: hidden;
 	margin-bottom: 30px;
@@ -362,7 +362,7 @@ h6{ font-size: 20px; }
 	padding-right: 30px;
 }
 
-#content .filter li{
+ .filter li{
 	display: block;
 	float: left;
 	font-size: 12px;
@@ -381,8 +381,7 @@ h6{ font-size: 20px; }
 	border-top: 1px solid #bcbcbc;
 }
 
-
-#content .filter li a{	
+ .filter li a{	
 	display: block;
 	color: #606060;
 	text-decoration: none;
@@ -391,25 +390,25 @@ h6{ font-size: 20px; }
 }
 
 
-#content .filter li:first-child:hover{
+ .filter li:first-child:hover{
 	background: none;
 }
 
-#content .filter li.active,
-#content .filter li:hover{
+ .filter li.active,
+ .filter li:hover{
 	background: #000;
 	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,.5); 
 	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,.5); 
 	box-shadow: 0px 1px 2px rgba(0,0,0,.5); 
 }
 
-#content .filter li:hover a,
-#content .filter li.active a{	
+ .filter li:hover a,
+ .filter li.active a{	
 	color: #f1f1f1;
 }
 
-#content .filter li:first-child,
-#content .filter li:first-child:hover{
+ .filter li:first-child,
+ .filter li:first-child:hover{
 	background: none;
 	border: none;
 	-webkit-box-shadow: 0px 0px 0px rgba(0,0,0,.0); 
@@ -508,7 +507,7 @@ h6{ font-size: 20px; }
 #projects-list .project{
 	position: relative;
 	float: left;
-	width: 438px;
+	max-width: 438px;
 	margin-left: 30px;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
@@ -529,7 +528,8 @@ h6{ font-size: 20px; }
 #projects-list .project .project-thumbnail{
 	position: relative;
 	overflow: hidden;
-	width: 438px;
+	max-width: 438px;
+    /*width: 100%;*/
 	height: 267px;
 	margin-bottom: 20px;
 	background: #f1f1f1;
@@ -565,14 +565,14 @@ h6{ font-size: 20px; }
 /* PROJECT --------------------------------------------------------*/
 
 .project-column{
-	width: 438px;
+	max-width: 670px;
 	float: left;
 	margin-left: 30px;
 }
 
 .project-column .project-thumbnail{
 	overflow: hidden;
-	width: 438px;
+	max-width: 438px;
 	height: 267px;
 	margin-bottom: 30px;
 	border-radius: 10px;
@@ -615,7 +615,7 @@ h6{ font-size: 20px; }
 .project-column .project-gallery{
 	display: block;
 	overflow: hidden;
-	width: 468px;
+	max-width: 670px;
 }
 
 .project-column .project-gallery li{
@@ -1109,7 +1109,7 @@ h6{ font-size: 20px; }
 	float: left;
 }
 
-#content .pager li a{
+ .pager li a{
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -1117,19 +1117,19 @@ h6{ font-size: 20px; }
 	text-align: center;
 	text-decoration: none;
 	color: #606060;
-	border-radius: 33px;
-	-moz-border-radius: 33px;
-	-webkit-border-radius: 33px;
-	background: #d1d1d1;
-	background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#f1f1f1)); 
-	background: -moz-linear-gradient(top,  #d1d1d1,  #f1f1f1);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1d1d1', endColorstr='#f1f1f1', GradientType=0);
+	border-radius: 33px !important;
+	-moz-border-radius: 33px !important;
+	-webkit-border-radius: 33px !important;
+	background: #d1d1d1 !important;
+	background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#f1f1f1)) !important; 
+	background: -moz-linear-gradient(top,  #d1d1d1,  #f1f1f1) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1d1d1', endColorstr='#f1f1f1', GradientType=0) !important;
 	
-	border-top: 1px solid #bcbcbc;
+	border-top: 1px solid #bcbcbc !important;
 }
 
-#content .pager li:hover a,
-#content .pager li.active a{
+ .pager li:hover a,
+ .pager li.active a{
 	color: #fff;
 	background: #515558;
 	background: -webkit-gradient(linear, left top, left bottom, from(#515558), to(#131313)); 
@@ -1283,7 +1283,7 @@ h6{ font-size: 20px; }
 /* SOCIAL --------------------------------------------------------*/
 
 .social{
-	position: absolute;
+	/*position: absolute;*/
 	top: 15px;
 	right: 0px;
 	display: block;
@@ -1303,7 +1303,7 @@ h6{ font-size: 20px; }
 	display: block;
 	width: 32px;
 	height: 32px;
-	text-indent: -9000px;
+	/*text-indent: -9000px;*/
 }
 
 #bottom .social a:hover{

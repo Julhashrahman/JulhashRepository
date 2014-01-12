@@ -3,7 +3,121 @@
     ViewBag.Title = "Portfolio";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script type="text/javascript">
+
+
+<div class="container">
+    <div id="projects-list" class="row" style="text-align: left">
+        <div class="span12">
+            <!-- title -->
+            <div id="page-title">
+                <span class="title">Portfolio</span> <span class="subtitle">Some of my web development
+                    work</span>
+            </div>
+        </div>
+
+        @{ Html.RenderAction("PortfolioMenu", "Nav"); }
+
+       
+        <div class="span6" style="text-align: center;">
+            @{
+                string itemPath = "";
+                itemPath = @Model[0].Path.Replace("Thumb", "Large");
+            }
+            <!-- project -->
+            <div class="project">
+                <h1>
+                    <a href="@Model[0].Caption">@Model[0].Title</a></h1>
+                <!-- shadow -->
+                <div class="project-shadow">
+                    <!-- project-thumb -->
+                    <div class="project-thumbnail">
+                        <!-- meta -->
+                        <ul class="meta">
+                            <li><strong>Project date</strong>&nbsp;@Model[0].ProjectDate  </li>
+                            <li><strong>Client</strong>&nbsp; @Model[0].Title </li>
+                            <li><strong>Visit website</strong> <a href="#">@Model[0].Caption</a></li>
+                        </ul>
+                        <!-- ENDS meta -->
+                        <a href="/Project/index/@Model[0].ID?category=@ViewBag.selectedPortfolioItem" class="cover">
+                            <img class="img-responsive" src="@Url.Content(@itemPath)" alt="@Model[0].Title" /></a>
+                    </div>
+                    <!-- ENDS project-thumb -->
+                    <div class="the-excerpt">
+                        @Model[0].Description
+                    </div>
+                    <a href="/Project/index/@Model[0].ID?category=@ViewBag.selectedPortfolioItem" class="read-more link-button"><span>View project</span></a>
+                </div>
+                <!-- ENDS shadow -->
+            </div>
+            <!-- ENDS project -->
+        </div>
+        <div class="span6">
+            @if (Model.Count > 1)
+            {
+
+
+                string itemPath2 = "";
+                itemPath2 = @Model[1].Path.Replace("Thumb", "Large");
+                           
+                <!-- project -->
+                <div class="project">
+                    <h1>
+                        <a href="@Model[1].Caption">@Model[1].Title</a></h1>
+                    <!-- shadow -->
+                    <div class="project-shadow">
+                        <div class="project-thumbnail">
+                            <!-- project-thumb -->
+                            <!-- meta -->
+                            <ul class="meta">
+                                <li><strong>Project date</strong>&nbsp;@Model[1].ProjectDate  </li>
+                                <li><strong>Client</strong>&nbsp; @Model[1].Title </li>
+                                <li><strong>Visit website</strong> <a href="#">@Model[1].Caption</a></li>
+                            </ul>
+                            <!-- ENDS meta -->
+                            <a href="/Project/index/@Model[0].ID?category=@ViewBag.selectedPortfolioItem" class="cover">
+                                <img class="img-responsive" src="@Url.Content(@itemPath2)" alt="@Model[1].Title" /></a>
+                        </div>
+                        <!-- ENDS project-thumb -->
+                        <div class="the-excerpt">
+                            @Model[1].Description
+                        </div>
+                        <a href="/Project/index/@Model[1].ID?category=@ViewBag.selectedPortfolioItem" class="read-more link-button"><span>View project</span></a>
+                    </div>
+                    <!-- ENDS shadow -->
+                </div>
+                <!-- ENDS project -->
+                       
+            }
+        </div>
+        <div class="span12">
+            <div class="pagination pull-left">
+                <ul>
+
+                    @if (Model.HasPreviousPage)
+                    {      
+                        <li>@Html.ActionLink("<<", "Index", new { page = (Model.PageIndex - 1), category= ViewBag.selectedPortfolioItem}) </li>    
+                    }
+                    @if (@Model.HasNextPage)
+                    {
+                        <li>@Html.ActionLink(">>", "Index", new { page = (Model.PageIndex + 1), category= ViewBag.selectedPortfolioItem })</li>
+                    }
+
+                </ul>
+
+                @*  <ul>
+					<li><a href="#">Prev</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">Next</a></li>
+				  </ul>
+				</div>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<script type="text/javascript">
     $(function () {
         $('#slides').slides({
             preload: true,
@@ -36,138 +150,5 @@
             }
         });
     });
-</script>
+</script>*@
 <!-- MAIN -->
-<div id="main">
-    <!-- wrapper-main -->
-    <div class="wrapper">
-        <!-- content -->
-        <div id="content">
-            <!-- title -->
-            <div id="page-title">
-                <span class="title">The Portfolio</span> <span class="subtitle">Some of my web development
-                    works</span>
-            </div>
-            <!-- ENDS title -->
-            <!-- filter -->
-            <ul class="filter">
-                <li>Categories</li>
-                @*<li class="active"><a href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce </a></li>*@
-                <li ><a href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce </a></li>
-                <li><a href="/Portfolio/Index/?page=&category=onlineeducation">Online-Education </a></li>
-                <li><a href="/Portfolio/Index/?page=&category=erecruitment">E-Recruitment </a></li>
-                <li><a href="/Portfolio/Index/?page=&category=informative">Informative </a></li>
-                <li ><a href="/Portfolio/Index/?page=&category=digitalads">Digital Ads </a></li>
-                <li><a href="/Portfolio/Index/?page=&category=logistics">Logistics </a></li>
-            </ul>
-            <!-- ENDS filter -->
-            <!-- Portfolio -->
-            <div id="projects-list">
-                <table>
-                    <tr>
-                        <td>
-                            @{
-                                string itemPath = "";
-                                itemPath = @Model[0].Path.Replace("Thumb", "Large");
-                            }
-                            <!-- project -->
-                            <div class="project">
-                                <h1>
-                                    <a href="@Model[0].Caption">@Model[0].Title</a></h1>
-                                <!-- shadow -->
-                                <div class="project-shadow">
-                                    <!-- project-thumb -->
-                                    <div class="project-thumbnail">
-                                        <!-- meta -->
-                                        <ul class="meta">
-                                            <li><strong>Project date</strong>&nbsp;@Model[0].ProjectDate  </li>
-                                            <li><strong>Client</strong>&nbsp; @Model[0].Title </li>
-                                            <li><strong>Visit website</strong> <a href="#">@Model[0].Caption</a></li>
-                                        </ul>
-                                        <!-- ENDS meta -->
-                                        <a href="project.html" class="cover">
-                                            <img src="@Url.Content(@itemPath)" alt="@Model[0].Title" /></a>
-                                    </div>
-                                    <!-- ENDS project-thumb -->
-                                    <div class="the-excerpt">
-                                        @Model[0].Description
-                                    </div>
-                                    <a href="/Project/index/@Model[0].ID" class="read-more link-button"><span>View project</span></a>
-                                </div>
-                                <!-- ENDS shadow -->
-                            </div>
-                            <!-- ENDS project -->
-                        </td>
-                       @if (Model.Count > 1)
-                       {
-                        <td>
-                            @{
-                           string itemPath2 = "";
-                           itemPath2 = @Model[1].Path.Replace("Thumb", "Large");
-                            }
-                            <!-- project -->
-                            <div class="project">
-                                <h1>
-                                    <a href="@Model[1].Caption">@Model[1].Title</a></h1>
-                                <!-- shadow -->
-                                <div class="project-shadow">
-                                    <div class="project-thumbnail">
-                                    <!-- project-thumb -->
-                                        <!-- meta -->
-                                        <ul class="meta">
-                                            <li><strong>Project date</strong>&nbsp;@Model[1].ProjectDate  </li>
-                                            <li><strong>Client</strong>&nbsp; @Model[1].Title </li>
-                                            <li><strong>Visit website</strong> <a href="#">@Model[1].Caption</a></li>
-                                        </ul>
-                                        <!-- ENDS meta -->
-                                        <a href="project.html" class="cover">
-                                            <img src="@Url.Content(@itemPath2)" alt="@Model[1].Title" /></a>
-                                    </div>
-                                    <!-- ENDS project-thumb -->
-                                    <div class="the-excerpt">
-                                         @Model[1].Description
-                                    </div>
-                                    <a href="/Project/index/@Model[1].ID" class="read-more link-button"><span>View project</span></a>
-                                </div>
-                                <!-- ENDS shadow -->
-                            </div>
-                            <!-- ENDS project -->
-                        </td>
-                       }
-                       
-                    </tr>
-                 
-                </table>
-            </div>
-            <!-- ENDS Portfolio -->
-            <!-- pagination -->
-            <div class="clear">
-            </div>
-            <ul class='pager'>
-                @if (Model.HasPreviousPage)
-                {      
-                    <li>@Html.ActionLink("<<", "Index", new { page = (Model.PageIndex - 1) }) </li>    
-                }
-                @if (@Model.HasNextPage)
-                {
-                    <li>@Html.ActionLink(">>", "Index", new { page = (Model.PageIndex + 1) })</li>
-                }
-
-@*
-                <li class='first-page'><a href='#'>&laquo;</a></li>
-                <li><a href='#'>&lsaquo;</a></li>
-                <li><a href='#'>2</a></li>
-                <li><a href='#'>3</a></li>
-                <li class='active'><a href='#'>4</a></li>
-                <li><a href='#'>5</a></li>
-                <li><a href='#'>6</a></li>
-                <li><a href='#'>&rsaquo;</a></li>
-                <li class='last-page'><a href='#'>&raquo;</a></li>*@
-            </ul>
-            <!-- ENDS pagination -->
-        </div>
-        <!-- ENDS content -->
-    </div>
-    <!-- ENDS wrapper-main -->
-</div>
-<!-- ENDS MAIN -->

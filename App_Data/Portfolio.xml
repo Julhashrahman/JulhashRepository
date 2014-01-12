@@ -2,7 +2,7 @@
 <Images>
   <Image>
     <ImageID>1</ImageID>
-    <Category>ecommerce</Category>
+    <Category>E-Commerce</Category>
     <Title>Infotrack Pty Ltd</Title>
     <Caption>http://www.infotrack.com.au</Caption>
     <ProjectDate>September,2012</ProjectDate>
@@ -19,7 +19,7 @@
   </Image>
   <Image>
     <ImageID>2</ImageID>
-    <Category>ecommerce onlineeducation</Category>
+    <Category>E-Commerce E-Education</Category>
     <Title>Kaplan Australia Pty Ltd</Title>
     <Caption>http://forms.kaplan.edu.au</Caption>
     <ProjectDate>July,2013</ProjectDate>
@@ -35,7 +35,7 @@
   </Image>
   <Image>
     <ImageID>3</ImageID>
-    <Category>erecruitment</Category>
+    <Category>E-Recruitment</Category>
     <Title>Bond International Software Pty Ltd</Title>
     <Caption>http://www.bondinternationalsoftware.com/</Caption>
     <ProjectDate>June,2010</ProjectDate>
@@ -59,7 +59,7 @@
   </Image>
   <Image>
     <ImageID>4</ImageID>
-    <Category>ecommerce</Category>
+    <Category>E-Commerce</Category>
     <Title>LoveID</Title>
     <Caption>http://www.loveid.com/</Caption>
     <ProjectDate>September,2010</ProjectDate>
@@ -79,7 +79,7 @@
   </Image>
   <Image>
     <ImageID>5</ImageID>
-    <Category>digitalads</Category>
+    <Category>Digital Ads</Category>
     <Title>Shakespearegrove</Title>
     <Caption>Not Live Anymore</Caption>
     <ProjectDate>October,2009</ProjectDate>

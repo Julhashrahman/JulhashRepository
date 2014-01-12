@@ -1,8 +1,28 @@
-﻿<!DOCTYPE  html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Julhash Rahman Website</title>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    @* @Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+    <link rel="stylesheet" href="../../Content/style.css" type="text/css" media="screen" />
+    <link id="callCss" rel="stylesheet" href="../../Content/bootstrap.min.css" type="text/css" media="screen" />
+    <link href="../../Content/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+    <link href="../../Content/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="../../Content/base.css" rel="stylesheet" type="text/css">
+    @*<script src="../../3rdparty/w3widgetsResponsiveSlider/js/jquery.js"></script>*@
+
+
+
     <!-- CSS -->
     <link rel="stylesheet" href="../../Content/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../../Content/social-icons.css" type="text/css" media="screen" />
@@ -62,127 +82,145 @@
     <script type="text/javascript" src="../../Scripts/poshytip-1.0/src/jquery.poshytip.min.js"></script>
     <!-- ENDS poshytip -->
     <!-- Tweet -->
-    <link rel="stylesheet" href="../../Content/jquery.tweet.css" media="all" type="text/css" />
+   <link rel="stylesheet" href="../../Content/jquery.tweet.css" media="all" type="text/css" />
     <script src="../../Scripts/tweet/jquery.tweet.js" type="text/javascript"></script>
     <!-- ENDS Tweet -->
+    
+    
     <!-- Fancybox -->
     <link rel="stylesheet" href="../../Scripts/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css"
         type="text/css" media="screen" />
     <script type="text/javascript" src="../../Scripts/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
     <!-- ENDS Fancybox -->
-</head>
-<body class="home">
-    <!-- HEADER -->
-    <div id="header">
-        <!-- wrapper-header -->
-        <div class="wrapper">
-            <a href="index.html">
-                <img id="logo" src="../../Images/MyLogo.png" alt="Julhash Rahman" /></a>
-            <!-- search -->
-            <div class="top-search">
-                <form method="get" id="searchform" action="#">
-                <div>
-                    <input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)"
-                        onblur="clearInput(this)" />
-                    <input type="submit" id="searchsubmit" value=" " />
-                </div>
-                </form>
-            </div>
-            <!-- ENDS search -->
-        </div>
-        <!-- ENDS wrapper-header -->
-    </div>
-    <!-- ENDS HEADER -->
-    <!-- Menu -->
-    <div id="menu">
-        <!-- ENDS menu-holder -->
-        <div id="menu-holder">
-            <!-- wrapper-menu -->
-            <div class="wrapper">
-                <!-- Navigation -->
-                <ul id="nav" class="sf-menu">
-                    <li class="current-menu-item">@*@Html.ActionLink("Profile", "Index", "Home")*@ <a
-                        href="/">Home<span class="subheader">Welcome</span></a> </li>
-                    <li>@*@Html.ActionLink("Portfolio", "Index", "Portfolio")*@ <a href="/Portfolio">Portfolio<span
-                        class="subheader">Showcase work</span></a> </li>
-                    <li>@*@Html.ActionLink("Photos", "Index", "Images")*@ <a href="/Images/Index">Gallery<span
-                        class="subheader">Featured work</span></a> </li>
-                    <li>@*@Html.ActionLink("Feedback", "Index", "Feedback")*@ <a href="/Feedback">Feedback<span
-                        class="subheader">Share your comment</span></a> </li>
-                    <li>@*@Html.ActionLink("Contact", "Index", "Contact")*@ <a href="/Contact">Contact<span
-                        class="subheader">Get in touch</span></a> </li>
-                </ul>
-                <!-- Navigation -->
-            </div>
-            <!-- wrapper-menu -->
-        </div>
-        <!-- ENDS menu-holder -->
-    </div>
-    <!-- ENDS Menu -->
-    <!-- Slider -->
-    @RenderBody()
-    <!-- ENDS Twitter -->
-    <!-- FOOTER -->
-    <div id="footer">
-        <!-- wrapper-footer -->
-        <div class="wrapper">
-            <!-- footer-cols -->
-            <ul id="footer-cols">
-                <li class="col">
-                    <h6>
-                        Pages</h6>
-                    <ul>
-                        <li class="page_item"><a href="/">Home</a></li>
-                        <li class="page_item"><a href="/Portfolio">Portfolio</a></li>
-                        <li class="page_item"><a href="/Photos">Gallery</a></li>
-                        <li class="page_item"><a href="/Feedback">Feedback</a></li>
-                        <li class="page_item"><a href="/Contact">Contact</a></li>
-                    </ul>
-                </li>
-                <li class="col">
-                    <h6>
-                        Categories</h6>
-                    <ul>
-                        <li><a href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce</a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=erecruitment">Online-Education</a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=erecruitment">E-Recruitment</a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=informative">Informative </a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=digitalads">Digital Ads</a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=logistics">Logistics</a></li>
 
-                    </ul>
-                </li>
-                <li class="col">
-                    <h6>
-                        About my Website</h6>
-                    This website mainly focuses on my personal and professional information. 
-                    You will have opportunity to know more details about my projects. </li>
-            </ul>
-            <!-- ENDS footer-cols -->
-        </div>
-        <!-- ENDS wrapper-footer -->
-    </div>
-    <!-- ENDS FOOTER -->
-    <!-- Bottom -->
-    <div id="bottom">
-        <!-- wrapper-bottom -->
-        <div class="wrapper">
-            <div id="bottom-text">
-                2013 Julhash Rahman Website all rights reserved.
+</head>
+<body>
+
+    <section id="headerSection">
+        <div class="img-responsive img-responsive2" style="width: 100%;">
+            <div class="container">
+                <div class="navbar">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar active" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1><a class="brand" href="/" style="color: #fff;">Julhash Rahman<br />
+                            <small>.Net developer</small></a></h1>
+
+                        @{ Html.RenderAction("Menu", "Nav", new { activeItem = ViewBag.selectedItem });}
+                       
+                    </div>
+                </div>
             </div>
-            <!-- Social -->
-            <ul class="social ">
-                <li><a href="https://twitter.com/JulhashRahman" target="_blank" class="poshytip twitter"
-                    title="Follow my tweets"></a></li>
-                <li><a href="http://au.linkedin.com/pub/julhash-rahman/46/66b/b01" target="_blank"
-                    class="poshytip linkedin" title="Linked me"></a></li>
-            </ul>
-            <!-- ENDS Social -->
-            <div id="to-top" class="poshytip" title="To top">
+
+        </div>
+    </section>
+    <div class="color-bar"></div>
+    <div id="body" style="min-height:400px;">
+        @* @RenderSection("featured", required: false)*@
+        @* <section class="content-wrapper main-content clear-fix">*@
+        @RenderBody()
+        @*</section>*@
+    </div>
+
+
+    <div class="footer-color-bar"></div>
+    <section id="footerSection">
+        <div class="container">
+            <footer class="footer well well-small">
+                <div class="row">
+                    <div class="span3 custom">
+                        <h6>Pages</h6>
+                        <ul>
+                            <li class="page_item"><a href="/">Home</a></li>
+                            <li class="page_item"><a href="/Portfolio">Portfolio</a></li>
+                           @* <li class="page_item"><a href="blog.html">Blog</a></li>*@
+                            <li class="page_item"><a href="/gallery">Gallery</a></li>
+                            <li class="page_item"><a href="/Feedback">Feedback</a></li>
+                            <li class="page_item"><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="span3 custom">
+                        <h6>Categories</h6>
+                        <ul>
+                            <li class="page_item"><a href="#">E-Commerce</a></li>
+                            <li class="page_item"><a href="#/">E-Education</a></li>
+                            <li class="page_item"><a href="#">E-Recruitment</a></li>
+                            <li class="page_item"><a href="#">Informative</a></li>
+                            <li class="page_item"><a href="#">Digital Ads</a></li>
+                            @*<li class="page_item"><a href="#">Logistics</a></li>*@
+                        </ul>
+                    </div>
+                    <div class="span5 custom">
+                        <h6>About Myself</h6>
+                        <p>
+                            I have completed my BSC. in Computer Science in the Phillippines. 
+                            After that I have decided to come over to Australia and focused my career to IT, 
+                            hence I have completed Advanced Standing BSC in IT and Msc in IT in the University of Ballarat, Melbourne, Australia. 
+                            Its been around more than 4 years, I have been working as a Web Developer 
+                            and got opportunity to work with variety of projects such as e-commerce, 
+                            online education, digital agency, legal practitioner, informative, 
+                            logistics and so on. In my spare time, I love to explore myself to learn latest technologies as they become available.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="span5">
+                        2013 Julhash Rahman Website all rights reserved.
+                    </div>
+                    <div class="span3 pull-right">
+                        <!-- Social -->
+                        <ul class="social ">
+                            <li><a href="https://twitter.com/JulhashRahman" target="_blank" class="poshytip twitter" title="Follow my tweets"></a></li>
+                            <li><a href="http://au.linkedin.com/pub/julhash-rahman/46/66b/b01" target="_blank" class="poshytip linkedin" title="Linked me"></a></li>
+                        </ul>
+                        <!-- ENDS Social -->
+                        @*<div id="to-top" class="poshytip" title="To top">
+                            </div>*@
+
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- ENDS wrapper-bottom -->
-    </div>
-    <!-- ENDS Bottom -->
+    </section>
+
+    <a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none;" id="toTop"><i class="icon-arrow-up"></i>Go to top</a>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+    <script src="../../3rdparty/w3widgetsResponsiveSlider/js/bootstrap.min.js"></script>
+
+    <script src="../../Scripts/3rdparty/bootstrap-tooltip.js"></script>
+    <script src="../../Scripts/3rdparty/bootstrap-popover.js"></script>
+    <script src="../../Scripts/3rdparty/business_ltd_1.0.js"></script>
+
+    <!-- Responsive Slider -->
+    <script src="../../3rdparty/w3widgetsResponsiveSlider/js/jquery.js"></script>
+    <script src="../../3rdparty/w3widgetsResponsiveSlider/js/jquery.event.move.js"></script>
+    <script src="../../3rdparty/w3widgetsResponsiveSlider/js/responsive-slider.js"></script>
+
+    <link href="../../3rdparty/w3widgetsResponsiveSlider/css/responsive-slider.css" rel="stylesheet" media="screen">
+
+
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*@RenderSection("scripts", required: false)*@
+
+    <script>
+        $(document).ready(function () {
+            $('.responsive-slider').responsiveSlider({
+                autoplay: true,
+                interval: 5000,
+                transitionTime: 300
+            });
+        });
+    </script>
+
 </body>
 </html>

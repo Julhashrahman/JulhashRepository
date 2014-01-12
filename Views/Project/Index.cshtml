@@ -1,43 +1,36 @@
 ﻿@model JulhashWebsite.Models.Portfolio
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<!-- MAIN -->
-<div id="main">
-    <!-- wrapper-main -->
-    <div class="wrapper">
-        <!-- content -->
-        <div id="content">
+
+
+
+<div class="container">
+    <div id="projects-list" class="row" style="text-align: left">
+        <div class="span12">
             <!-- title -->
             <div id="page-title">
-                 <span class="title">The Portfolio</span> <span class="subtitle">Some of my web development
+                <span class="title">Portfolio</span> <span class="subtitle">Some of my web development
                     works</span>
             </div>
-            <!-- ENDS title -->
-            <!-- filter -->
-            <ul class="filter">
-                <li>Categories</li>
-                @*<li class="active"><a href="#">E-Commerce </a></li>*@
-                        <li><a href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce</a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=onlineeducation">Online-Education</a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=erecruitment">E-Recruitment</a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=informative">Informative </a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=digitalads">Digital Ads</a></li>
-                        <li><a href="/Portfolio/Index/?page=&category=logistics">Logistics</a></li>
+        </div>
 
-            </ul>
-            <!-- ENDS filter -->
-            <!-- project column (left)-->   
+         @{ Html.RenderAction("PortfolioMenu", "Nav"); }
+
+        <div class="span7" style="padding-top:10px; padding-bottom:10px;">
+            <!-- project column (left)-->
             <div class="project-column">
                 <!-- shadow -->
                 <div class="project-shadow">
-                 @{
-                                string itemPath = "";
-                                itemPath = @Model.Path.Replace("Thumb", "Large");
-                            }
+                    @{
+                        string itemPath = "";
+                        itemPath = @Model.Path.Replace("Thumb", "Large");
+                    }
                     <div class="project-thumbnail">
 
-                         <img src="@Url.Content(@itemPath)" alt="@Model.Title" /></div>
+                        <img src="@Url.Content(@itemPath)" alt="@Model.Title" />
+                    </div>
                     <!-- meta -->
                     <ul class="meta">
                         <li><strong>Project date</strong>&nbsp; @Model.ProjectDate  </li>
@@ -50,24 +43,41 @@
                 </div>
                 <!-- ENDS shadow -->
                 <!-- project gallery -->
-                <h2>
-                    Project gallery</h2>
-
-                <ul class="project-gallery">
-                    <li><a href='@Model.Project.Path01.Replace("Thumb","Large")' class="fancybox">
-                        <img src="@Model.Project.Path01" alt="Infotrack"></a></li>
-                    <li><a href="@Model.Project.Path02.Replace("Thumb","Large")" class="fancybox">
-                        <img src="@Model.Project.Path02" alt="Infotrack"></a></li>
-                    <li><a href="@Model.Project.Path03.Replace("Thumb","Large")" class="fancybox">
-                        <img src="@Model.Project.Path03" alt="Infotrack"></a></li>
-                    <li><a href="@Model.Project.Path04.Replace("Thumb","Large")" class="fancybox">
-                        <img src="@Model.Project.Path04" alt="Infotrack"></a></li>
-                </ul>
+                <h2>Project gallery</h2>
+                <div class="row">
+                    <div class="span3 pull-left">
+                        <ul class="project-gallery">
+                            <li><a href='@Model.Project.Path01.Replace("Thumb", "Large")' class="fancybox">
+                                <img src="@Model.Project.Path01" alt="Infotrack"></a></li>
+                        </ul>
+                    </div>
+                    <div class="span3 pull-left">
+                        <ul class="project-gallery">
+                            <li><a href='@Model.Project.Path02.Replace("Thumb", "Large")' class="fancybox">
+                                <img src="@Model.Project.Path02" alt="Infotrack"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span3 pull-left">
+                        <ul class="project-gallery">
+                            <li><a href='@Model.Project.Path03.Replace("Thumb", "Large")' class="fancybox">
+                                <img src="@Model.Project.Path03" alt="Infotrack"></a></li>
+                        </ul>
+                    </div>
+                    <div class="span3 pull-left">
+                        <ul class="project-gallery">
+                            <li><a href='@Model.Project.Path04.Replace("Thumb", "Large")' class="fancybox">
+                                <img src="@Model.Project.Path04" alt="Infotrack"></a></li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- ENDS project gallery -->
             </div>
-            <!-- ENDS project column (left)-->
+        </div>
+        <div class="span5">
             <!--project column (right) -->
-            <div class="project-column">
+            <div class="">
                 <h1 class="project-title">
                     @Model.Title</h1>
                 @Model.Project.Description
@@ -78,6 +88,6 @@
         </div>
         <!-- ENDS content -->
     </div>
-    <!-- ENDS wrapper-main -->
 </div>
-<!-- ENDS MAIN -->
+
+

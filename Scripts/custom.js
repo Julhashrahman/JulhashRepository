@@ -154,18 +154,22 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Portfolio projects rollover --------------------------------------------- //
-	
-	$('#projects-list .project').hover(function(){
-		// on rollover
-		$(this).children('.project-shadow').children('.project-thumbnail').children(".cover").stop().animate({ 
-			top: "133"
-		}, "fast");
-	} , function() { 
-		// on out
-		$(this).children('.project-shadow').children('.project-thumbnail').children(".cover").stop().animate({
-			top: "0" 
-		}, "fast");
-	});
+
+
+	//$('#projects-list .project').hover(function () {
+
+	//    console.log("I am in");
+
+	//	// on rollover
+	//	$(this).children('.project-shadow').children('.project-thumbnail').children(".cover").stop().animate({ 
+	//		top: "133"
+	//	}, "fast");
+	//} , function() { 
+	//	// on out
+	//	$(this).children('.project-shadow').children('.project-thumbnail').children(".cover").stop().animate({
+	//		top: "0" 
+	//	}, "fast");
+	//});
 	
 	// Sidebar rollover --------------------------------------------------- //
 
@@ -211,10 +215,10 @@ jQuery(document).ready(function($) {
 		
 		$("a[rel^='prettyPhoto']").prettyPhoto();
 						
-		// Fancy box
-		$("a.fancybox").fancybox({ 
-			'overlayColor'		:	'#000'
-		});
+		//// Fancy box
+		//$("a.fancybox").fancybox({ 
+		//	'overlayColor'		:	'#000'
+		//});
 		
 		// Gallery over 
 	

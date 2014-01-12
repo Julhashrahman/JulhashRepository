@@ -5,13 +5,60 @@
 }
 <div class="header">
     <style>
-        tr td.label
-        {
+        tr td.label {
             width: 100px !important;
         }
     </style>
 </div>
-<div>
+
+
+<div class="container">
+    <div id="projects-list" class="row" style="text-align: left">
+        <div class="span12">
+            <!-- title -->
+            <div id="page-title">
+                <span class="title">Portfolio</span> <span class="subtitle">Some of my web development
+                    works</span>
+            </div>
+        </div>      
+        <div class="span7">
+             <span style="color: red; font-size: 12px;">@ViewBag.Message</span>
+
+            <div class="span12">
+                <h3>Email Me</h3>
+                <form class="form-horizontal" action="/Feedback/Index/" method="post">
+                    <fieldset>
+                        <div class="control-group">
+
+                            <input type="text" class="input-xlarge" id="FirstName" name="FirstName" placeholder="name">
+                        </div>
+                        <div class="control-group">
+
+                            <input type="text" id="Email" name="Email" class="input-xlarge" placeholder="email">
+                        </div>
+                        <div class="control-group">
+
+                            <input type="text" class="input-xlarge" placeholder="subject">
+                        </div>
+                        <div class="control-group">
+                            <textarea class="input-xlarge" id="Message" name="Message" rows="4"></textarea>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-large"><i class="icon-envelope"></i>&nbsp;Send Message</button>
+                      
+                    </fieldset>
+                      <br />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@*<div>
     <!-- MAIN -->
     <div id="main">
         <!-- wrapper-main -->
@@ -28,7 +75,7 @@
                     <!-- form -->
                     <h2>
                         Feedback Form</h2>
-                    @*<script type="text/javascript" src="js/form-validation.js"></script>*@
+                   
                     <form id="contactForm" data-bind="submit: save">
                     <fieldset>
                         <div>
@@ -65,29 +112,26 @@
                 </div>
                 <!-- column (right)-->
                 <div class="one-column">
-                    <!-- content -->
-                   @* <p>
-                        <img src="img/dummies/map.jpg" alt="map"></p>
-                   *@
+                   
                     <!-- ENDS content -->
                 </div>
                 <!-- ENDS column -->
             </div>
         </div>
     </div>
-</div>
+</div>*@
 <script type="text/javascript">
-        var initialData = @Html.Raw(Json.Encode(Model));
+  @*  var initialData = @Html.Raw(Json.Encode(Model));
 
-        //alert(initialData);
+    //alert(initialData);
 
-        var viewModel = {
-                            feedbacks: ko.observableArray(initialData),
-                            save: function(){
-                                    ko.utils.postJson(location.href, {feedbacks: this.feedbacks});  
-                                  }
-                        };
+    var viewModel = {
+        feedbacks: ko.observableArray(initialData),
+        save: function(){
+            ko.utils.postJson(location.href, {feedbacks: this.feedbacks});  
+        }
+    };
 
-        //activates KO
-        ko.applyBindings(viewModel, document.body);
+    //activates KO
+    ko.applyBindings(viewModel, document.body);*@
 </script>

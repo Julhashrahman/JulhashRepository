@@ -1,36 +1,25 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Portfolio";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- MAIN -->
-<div id="main">
-    <!-- wrapper-main -->
-    <div class="wrapper">
-        <!-- content -->
-        <div id="content">
+<div class="container">
+    <div id="projects-list" class="row" style="text-align: left">
+        <div class="span12">
             <!-- title -->
             <div id="page-title">
-                <span class="title">The Portfolio</span> <span class="subtitle">Some of my web development
-                    works</span>
+                <span class="title">Portfolio</span> <span class="subtitle">Some of my web development
+                    work</span>
             </div>
-            <!-- ENDS title -->
-            <!-- filter -->
-            <ul class="filter">
-                <li>Categories</li>
-                <li class="active"><a href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce </a></li>
-                <li ><a href="#">Digital Ads </a></li>
-                <li><a href="#">Logistics </a></li>
-                <li><a href="#">Online-Education </a></li>
-                <li><a href="#">E-Recruitment </a></li>
-                <li><a href="#">Informative </a></li>
-            </ul>
-            <!-- ENDS filter -->
+        </div>
+
+        @{ Html.RenderAction("PortfolioMenu", "Nav"); }
+
+
+        <div class="span12" style="text-align: center;">
             <h2>No project found!</h2>
         </div>
-        <!-- ENDS content -->
     </div>
-    <!-- ENDS wrapper-main -->
 </div>
-<!-- ENDS MAIN -->
+
+

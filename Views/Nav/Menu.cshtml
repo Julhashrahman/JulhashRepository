@@ -1,0 +1,38 @@
+﻿@model IEnumerable<JulhashWebsite.Models.MainNav>
+
+@{
+Layout = null;
+}
+
+
+
+  <div class="nav-collapse collapse" style="z-index: 3000;">
+                            <ul class="nav pull-right">
+
+
+                                @foreach (var link in Model) {
+                                  <li class = '@(link.Name == ViewBag.selectedItem ? "active" : null)'>
+                                      @Html.RouteLink(link.Name,
+                                    new {
+                                    controller = link.Controller,
+                                    action = link.Action,
+                                    activeItem = link.Name,
+                                    page = 0
+                                    },
+                                    new {
+                                    @class = link.Name == ViewBag.selectedItem ? "active" : null
+                                    }
+                                    )
+
+                                      </li>
+                                }
+
+
+
+@*                                <li class="active"><a href="/">Home	</a></li>
+                                <li class=""><a href="/Portfolio">Portfolio</a></li>
+                                <li class=""><a href="/Photos">Gallery</a></li>
+                                <li class=""><a href="/Feedback">Feedback</a></li>
+                                <li class=""><a href="/Contact">Contact</a></li>*@
+                            </ul>
+                        </div>

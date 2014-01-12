@@ -1,4 +1,4 @@
-﻿<div id="slider-block">
+﻿@*<div id="slider-block">
     <div id="slider-holder">
         <div id="slider">
             <a href="https://forms.kaplan.edu.au"><img src="images/Kaplan01.jpg" title="Kaplan Australia Pty Ltd" alt="" /></a> 
@@ -10,118 +10,110 @@
         </div>
     </div>
 </div>
-<!-- ENDS Slider -->
-<!-- MAIN -->
-<div id="main">
-    <!-- wrapper-main -->
-    <div class="wrapper">
-        <!-- headline -->
-        <div class="clear">
-        </div>
-        <div id="headline">
-            <span class="main">Welcome to my website</span>
-            <p>
-                Dear Visitor, please note that this website is still under development. Some of
-                the links and details are not available at this stage.
-            </p>
-        </div>
-        <!-- ENDS headline -->
-        <!-- content -->
-        <div id="content">
-            <!-- TABS -->
-            <!-- the tabs -->
-            <ul class="tabs">
-                @*<li><a href="#"><span>Featured Pages</span></a></li>*@
-                <li><a href="#"><span>Profile</span></a></li>
-               @* <li><a href="#"><span>Recent posts</span></a></li>*@
-            </ul>
-            <!-- tab "panes" -->
-            <div class="panes">
-                <!-- Posts -->
-              @*  <div>
-                    <ul class="blocks-thumbs thumbs-rollover">
-                        <li><a href="#" class="thumb" title="An image">
-                            <img src="../../img/dummies/282x150.gif" alt="Post" /></a>
-                            <div class="excerpt">
-                                Updating soon...
+<!-- ENDS Slider -->*@
+
+<div id="slider-block">
+        <!-- Responsive slider - START -->
+        <div class="container">
+
+            <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+                <div class="slides" data-group="slides">
+                    <ul>
+                        <li>
+                            <div class="slide-body" data-group="slide">
+                                <img src="images/amway1.png">
+                                <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                                    <h2>Amway Australia</h2>
+                                    <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Global E-Commerce Website</div>
+                                </div>
+                                <div class="caption img-html5" data-animate="slideAppearLeftToRight" data-delay="200">
+                                   @* <img src="../3rdparty/w3widgetsResponsiveSlider/img/html5.png">*@
+                                    Asp.Net MVC, BackboneMarionette and so on.
+                                </div>
+                                <div class="caption" data-animate="slideAppearLeftToRight">
+                                    @*D3JS*@
+                                    @*<img src="../3rdparty/w3widgetsResponsiveSlider/img/css3.png">*@
+                                </div>
                             </div>
-                            <a href="#" class="link-button"><span>Read more &#8594;</span></a>
                         </li>
-                        <li><a href="#" class="thumb" title="An image">
-                            <img src="../../img/dummies/282x150.gif" alt="Post" /></a>
-                            <div class="excerpt">
-                                Updating soon...
+                        <li>
+                            <div class="slide-body" data-group="slide">
+                                <img src="images/infotrack1.png">
+                                <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                                    <h2>InfoTrack Australia</h2>
+                                    <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Nation-wide Website</div>
+                                </div>
+                                <div class="caption" data-animate="slideAppearDownToUp" data-delay="200">
+                                    @*<img src="../3rdparty/w3widgetsResponsiveSlider/img/bootstrap.png">*@
+                                   @* Asp.Net MVC, KnockoutJS and so on.*@
+                                </div>
+                                <div class="caption" data-animate="slideAppearUpToDown">
+                                    @*<img src="../3rdparty/w3widgetsResponsiveSlider/img/twitter.png">*@
+                                   @* Enterprise System*@
+
+                                </div>
                             </div>
-                            <a href="#" class="link-button"><span>Read more &#8594;</span></a>
                         </li>
-                        <li><a href="#" class="thumb" title="An image">
-                            <img src="../../img/dummies/282x150.gif" alt="Post" /></a>
-                            <div class="excerpt">
-                                Updating soon...
+                        <li>
+                            <div class="slide-body" data-group="slide">
+                                <img src="images/loveid2.png">
+                                <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                                    <h2>Asp.Net 3.5, Asp.Net 4.0</h2>
+                                    <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Most of the work involved customization.</div>
+                                </div>
+                                <div class="caption img-jquery" data-animate="slideAppearDownToUp" data-delay="200">
+                                    @*<img src="../3rdparty/w3widgetsResponsiveSlider/img/jquery.png">*@
+                                </div>
                             </div>
-                            <a href="#" class="link-button"><span>Read more &#8594;</span></a>
                         </li>
                     </ul>
-                </div>*@
-                <!-- ENDS posts -->
-                <!-- Information  -->
-                <div>
-                    <div class="plain-text">
-                        <h6>
-                            Who I am and What I do</h6>
-                        <p>
-                            Name: Julhash Rahman</p>
-                        <p>
-                            Profession: .NET Web Developer</p>
-                        <p>
-                            Location: Sydney, Australia</p>
+                </div>
+                <a class="slider-control left" href="#" data-jump="prev"><</a>
+                <a class="slider-control right" href="#" data-jump="next">></a>
+                <div class="pages">
+                    <a class="page" href="#" data-jump-to="1">1</a>
+                    <a class="page" href="#" data-jump-to="2">2</a>
+                    <a class="page" href="#" data-jump-to="3">3</a>
+                </div>
+            </div>
+            <div class="background-shadow">
+            </div>
+        </div>
+        <!-- Responsive slider - END -->
+    </div>
 
-                        <p><a href="../../Resume/index.html">Responsive Resume</a></p>
-                        <a href="#" class="link-button"><span>Read more &#8594;</span></a>
+
+
+<section id="middleSection" style="min-height: 290px;">
+    <div class="container">
+        <div class="row" style="text-align: left">
+            <div class="span12">
+                <div class="well well-small">
+                    <h4>Welcome to my Website</h4>
+                    <p>
+                        "My aim is to provide information about my skills and experiences through this website. 
+                    Please feel free to explore my website and let me know if you require any developer. 
+                    I am available to create websites that fully meet your requirements a professional look that inspire confidence in your customer."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="text-align: left">
+            <div class="span12">
+                <div class="tabs">
+                    <div style="padding-top: 50px;">
+                        <div>
+                            <h4>Who I am and What I do</h4>
+                            <p>
+                                My name is Julhash Rahman. I am a .Net Developer living in Sydney, Australia.
+                            <br />
+                                
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <!-- ENDS Information -->
-                <!-- Posts -->
-                <div>
-                    <ul class="blocks-thumbs thumbs-rollover">
-                        <li><a href="#" class="thumb" title="An image">
-                            <img src="../../img/dummies/282x150.gif" alt="Post" /></a>
-                            <div class="excerpt">
-                                Updating soon... <a href="#" class="link-button"><span>Read more &#8594;</span></a>
-                        </li>
-                        <li><a href="#" class="thumb" title="An image">
-                            <img src="../../img/dummies/282x150.gif" alt="Post" /></a>
-                            <div class="excerpt">
-                                Updating soon...
-                            </div>
-                            <a href="#" class="link-button"><span>Read more &#8594;</span></a>
-                        </li>
-                        <li><a href="#" class="thumb" title="An image">
-                            <img src="../../img/dummies/282x150.gif" alt="Post" /></a>
-                            <div class="excerpt">
-                                Updating soon...
-                            </div>
-                            <a href="#" class="link-button"><span>Read more &#8594;</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- ENDS posts -->
             </div>
-            <!-- ENDS TABS -->
-        </div>
-        <!-- ENDS content -->
-    </div>
-    <!-- ENDS wrapper-main -->
-</div>
-<!-- ENDS MAIN -->
-<!-- Twitter -->
-<div id="twitter">
-    <div class="wrapper">
-        <a href="#" id="prev-tweet"></a><a href="#" id="next-tweet"></a>
-        <img id="bird" src="../../img/bird.png" alt="Tweets" />
-        <div id="tweets">
-            <ul class="tweet_list">
-            </ul>
         </div>
     </div>
-</div>
+</section>
