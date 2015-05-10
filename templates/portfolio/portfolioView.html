@@ -1,0 +1,200 @@
+﻿<div class="col-12" style="border-bottom: 1px solid #fff; padding-bottom: 20px;">
+    <ul class="nav nav-pills pro-filter" style="margin: 0px 18px;">
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'All'? 'active' : '' ">
+            <a href="#/portfolio/All/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'All'? 'active' : '' ">All</a>
+        </li>
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Commerce'? 'active' : '' ">
+            <a href="#/portfolio/E-Commerce/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Commerce'? 'active' : '' ">E-Commerce</a>
+        </li>
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Education'? 'active' : '' ">
+            <a href="#/portfolio/E-Education/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Education'? 'active' : '' ">E-Education</a>
+        </li>
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Recruitment'? 'active' : '' ">
+            <a href="#/portfolio/E-Recruitment/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Recruitment'? 'active' : '' ">E-Recruitment</a>
+        </li>
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'Informative'? 'active' : '' ">
+            <a href="#/portfolio/Informative/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'Informative'? 'active' : '' ">Informative</a>
+        </li>
+    </ul>
+
+</div>
+
+<div class="Portfolio-View" data-ng-show=" showProject === false && data.portfolioViewModel.PortfolioList.length > 0">
+    <div class="col-12" style="text-align: left;">
+        <!--<div data-ng-repeat="portfolio in data.portfolioViewModel.PortfolioList">-->
+
+        <div class="row">
+            <!-- project -->
+            <div class="project col-md-5">
+                <h1>
+                    <a data-ng-href="{{ data.portfolioViewModel.PortfolioList[0].Caption }}">{{ data.portfolioViewModel.PortfolioList[0].Title }}</a>
+                </h1>
+                <!-- shadow -->
+                <div class="project-shadow">
+                    <!-- project-thumb -->
+                    <div class="project-thumbnail" data-ng-mouseover="slideDown(data.portfolioViewModel.PortfolioList[0])" data-ng-mouseleave="slideUp(data.portfolioViewModel.PortfolioList[0])">
+                        <!-- meta -->
+                        <ul class="meta">
+                            <li><strong>Project date</strong>&nbsp;{{ data.portfolioViewModel.PortfolioList[0].ProjectDate }}  </li>
+                            <li><strong>Client</strong>&nbsp; {{ data.portfolioViewModel.PortfolioList[0].Title }} </li>
+                            <li><strong>Visit website</strong> <a href="#">{{ data.portfolioViewModel.PortfolioList[0].Caption }}</a></li>
+                        </ul>
+                        <!-- ENDS meta -->
+                        <a data-ng-href="/Project/index/{{ data.portfolioViewModel.PortfolioList[0].ID }}?category={{ data.portfolioViewModel.PortfolioList[0].Category }}"
+                            class="cover" data-ng-class="data.portfolioViewModel.PortfolioList[0].className">
+                            <img class="img-responsive" data-ng-src="{{ data.portfolioViewModel.PortfolioList[0].Path.replace('Thumb', 'Large') }}" data-ng-alt="{{ data.portfolioViewModel.PortfolioList[0].Title }}" />
+                        </a>
+                    </div>
+                    <!-- ENDS project-thumb -->
+                    <div class="the-excerpt" style="height: 40px; overflow: hidden;">
+                        {{ data.portfolioViewModel.PortfolioList[0].Description }}
+                    </div>
+                    <a href="javascript:void(0);"  
+                        class="read-more link-button" data-ng-click="togglePrject(data.portfolioViewModel.PortfolioList[0])" ><span>View project</span></a>
+                </div>
+                <!-- ENDS shadow -->
+            </div>
+            <!-- ENDS project -->
+
+            <div data-ng-show="data.portfolioViewModel.PortfolioList.length > 1">
+                <!-- project -->
+                <div class="project col-md-5">
+                    <h1>
+                        <a data-ng-href="{{ data.portfolioViewModel.PortfolioList[1].Caption }}">{{ data.portfolioViewModel.PortfolioList[1].Title }}</a>
+                    </h1>
+                    <!-- shadow -->
+                    <div class="project-shadow">
+                        <!-- project-thumb -->
+                        <div class="project-thumbnail" data-ng-mouseover="slideDown(data.portfolioViewModel.PortfolioList[1])" data-ng-mouseleave="slideUp(data.portfolioViewModel.PortfolioList[1])">
+                            <!-- meta -->
+                            <ul class="meta">
+                                <li><strong>Project date</strong>&nbsp;{{ data.portfolioViewModel.PortfolioList[1].ProjectDate }}  </li>
+                                <li><strong>Client</strong>&nbsp; {{ data.portfolioViewModel.PortfolioList[1].Title }} </li>
+                                <li><strong>Visit website</strong> <a href="#">{{ data.portfolioViewModel.PortfolioList[1].Caption }}</a></li>
+                            </ul>
+                            <!-- ENDS meta -->
+                            <a data-ng-href="/Project/index/{{ data.portfolioViewModel.PortfolioList[1].ID }}?category={{ data.portfolioViewModel.PortfolioList[1].Category }}"
+                                class="cover" data-ng-class="data.portfolioViewModel.PortfolioList[1].className">
+                                <img class="img-responsive" data-ng-src="{{ data.portfolioViewModel.PortfolioList[1].Path.replace('Thumb', 'Large') }}" data-ng-alt="{{ data.portfolioViewModel.PortfolioList[1].Title }}" />
+                            </a>
+                        </div>
+                        <!-- ENDS project-thumb -->
+                        <div class="the-excerpt" style="height: 40px; overflow: hidden;">
+                            {{ data.portfolioViewModel.PortfolioList[1].Description }}
+                        </div>
+                        <a href="javascript:void(0);"  
+                            class="read-more link-button" data-ng-click="togglePrject(data.portfolioViewModel.PortfolioList[1])"><span>View project</span></a>
+                    </div>
+                    <!-- ENDS shadow -->
+                </div>
+                <!-- ENDS project -->
+            </div>
+
+        </div>
+
+
+        <!--</div>-->
+    </div>
+
+
+    <div style="clear: both;"></div>
+
+    <div class="col-12 text-center" data-ng-show="data.portfolioViewModel.PortfolioList.length > 0">
+        <ul class="pagination">
+            <li>
+                <a data-ng-href="#/portfolio/{{ data.portfolioViewModel.SearchCriteria.SelectedCategory }}/{{ data.portfolioViewModel.Pagination.PageIndex - 1 }}"
+                    data-ng-hide="!data.portfolioViewModel.Pagination.HasPreviousPage">&laquo;</a>
+            </li>
+            <li data-ng-repeat="n in [] | range:  data.portfolioViewModel.Pagination.TotalPages " data-ng-class="{active: (n -1) == data.portfolioViewModel.Pagination.PageIndex }">
+                <a data-ng-href="#/portfolio/{{ data.portfolioViewModel.SearchCriteria.SelectedCategory }}/{{  n - 1 }}">{{ n  }}</a>
+            </li>
+
+            <li>
+                <a data-ng-href="#/portfolio/{{ data.portfolioViewModel.SearchCriteria.SelectedCategory }}/{{ data.portfolioViewModel.Pagination.PageIndex + 1 }}"
+                    data-ng-hide="!data.portfolioViewModel.Pagination.HasNextPage">&raquo;</a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+<div data-ng-show="data.portfolioViewModel.PortfolioList.length < 1">
+    <h2>No project found!</h2>
+</div>
+
+
+
+<div class="Project-View row" data-ng-show="showProject">
+    <div class="col-md-7" style="padding-top:10px; padding-bottom:10px;">
+        <div class="project-column">
+            <div class="project-shadow">
+                <div class="project-thumbnail">
+                    <img data-ng-src="{{ portfolio.Path.replace('Thumb', 'Large') }}" alt="{{ portfolio.Title }}" />
+                </div>
+                <ul class="meta">
+                        <li><strong>Project date</strong>&nbsp; {{ portfolio.ProjectDate }}  </li>
+                        <li><strong>Client</strong> &nbsp; {{ portfolio.Title }} </li>
+                        <li><strong>Visit website</strong>&nbsp; {{ portfolio.Caption }} </li>
+                    </ul>
+                    <!-- ENDS meta -->
+                <div class="portfolio-left-shadow">
+                </div>
+
+                <h2>Project gallery</h2>
+
+                <div class="row">
+                    <div class="col-md-3 pull-left">
+                        <ul class="project-gallery">
+                            <li><a href='' class="fancybox">
+                                <img src="" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 pull-left">
+                        <ul class="project-gallery">
+                            <li><a href='' class="fancybox">
+                                <img src="" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 pull-left">
+                        <ul class="project-gallery">
+                            <li><a href='' class="fancybox">
+                                <img src="" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 pull-left">
+                        <ul class="project-gallery">
+                            <li><a href='' class="fancybox">
+                                <img src="" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="col-md-5">
+
+        <div class="">
+                <h1 class="project-title">{{ portfolio.Title }}</h1>
+                {{ portfolio.Project.Description }}
+            </div>
+            <div class="clear">
+            </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+

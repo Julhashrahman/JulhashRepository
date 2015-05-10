@@ -1,41 +1,43 @@
 ﻿@model IEnumerable<string>
 
 @{
-Layout = null;
+    Layout = null;
 }
 
+@*class="@(link == ViewBag.selectedPortfolioItem ? "active" : null)"*@
 
+<div class="col-12" style="border-bottom: 1px solid #fff; padding-bottom: 20px;">
+    <ul class="nav nav-pills pro-filter">
+        @foreach (var link in Model)
+        {            
+            <li>
+                @*<a href="/Portfolio/Index/?page=&category=@link">@link</a>*@
 
-  <div class="span12" style="border-bottom:1px solid #fff; padding-bottom:20px;">
-            <ul class="nav pro-filter">
+                <a href="#/portfolio/@link/0" class="@(link == ViewBag.selectedPortfolioItem ? "active" : null)" >@link</a>
 
-                @foreach (var link in Model) {
-                    <li class="@(link == ViewBag.selectedPortfolioItem ? "active" : null)">
-                        @*<a href="/Portfolio/Index/?page=&category=@link">@link</a>*@
-
-
-                        @Html.RouteLink(link,
-                        new {
-                        controller = "Portfolio",
-                        action = "Index",
-                        category = link,                        
-                        page = 0
+                @*@Html.RouteLink(link,
+                        new
+                        {
+                            controller = "Portfolio",
+                            action = "Index",
+                            category = link,
+                            page = 0
                         },
-                        new {
-                        @class = link == ViewBag.selectedPortfolioItem ? "active" : null
+                        new
+                        {
+                            @class = link == ViewBag.selectedPortfolioItem ? "active" : null
                         }
-                                                )
+                 )*@
+            </li>
+        }
 
-                    </li>
-}
 
 
-               
-               @* <li class="active"><a data-toggle="tab" href="#all">ALL</a></li>
+        @* <li class="active"><a data-toggle="tab" href="#all">ALL</a></li>
                 <li class=""><a data-toggle="tab" href="/Portfolio/Index/?page=&category=ecommerce">E-Commerce</a></li>
                 <li class=""><a data-toggle="tab" href="/Portfolio/Index/?page=&category=onlineeducation">Online-Education</a></li>
                 <li class=""><a data-toggle="tab" href="/Portfolio/Index/?page=&category=erecruitment">Informative</a></li>
                 <li class=""><a data-toggle="tab" href="/Portfolio/Index/?page=&category=digitalads">Digital Ads</a></li>
                 <li class=""><a data-toggle="tab" href="/Portfolio/Index/?page=&category=logistics">Logistics</a></li>*@
-            </ul>
-        </div>
+    </ul>
+</div>

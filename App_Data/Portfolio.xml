@@ -8,35 +8,31 @@
     <ProjectDate>September,2012</ProjectDate>
     <Path>../../Image/portfolio/Ecommerce/Thumb/infotrack.jpg</Path>
     <Description>
-      This website was made of ASP.NET 4, C#, ASP.NET MVC4, Telerik Frameworks, LINQ,
-      XML, XSLT, XSD, AJAX, WCF,HTML5, CSS3,  XHTML, DHTML, Razor, SQL SERVER 2008, JQuery, MVVM
-      and Module Pattern Javascript, KnockoutJS. TFS(Team Foundation Server) was used
-      to control the project version. Agile Methodologies(SCRUM) was used. Mainly worked
-      on Pre-Purchase Reports, NSW Property Certificates, eNOS, WA Landgate title search,
-      Vic title alert, CRR Search, Property Enquiries, NSW LPI etc.
+      Web programming ( ASP.NET(4.0), C#, MVC 4, WebForms, WinForms, Telerik Frameworks, LINQ, XML, XSLT, XSD, AJAX, WCF, XHTML, DHTML, Razor, CSS, SQL Server 2008, JQuery, JavaScript and Javascript with MVVM and Module pattern, knockoutJS, TFS 2010 etc.
+      Redesigned and developed the look and Feel of the website from Leap Searching to Infotrack.
+      Branding of the Infotrack website for retailers.
     </Description>
     <SortOrder>1</SortOrder>
   </Image>
   <Image>
     <ImageID>2</ImageID>
-    <Category>E-Commerce E-Education</Category>
-    <Title>Kaplan Australia Pty Ltd</Title>
+    <Category>E-Education</Category>
+    <Title>Kaplan Australia Pty Ltd</Title>   
     <Caption>http://forms.kaplan.edu.au</Caption>
     <ProjectDate>July,2013</ProjectDate>
     <Path>../../Image/portfolio/Ecommerce/Thumb/Kaplan.jpg</Path>
     <Description>
-      This website was made of ASP.NET 4, C#, Component Art Frameworks, LINQ,
-      XML, XSLT, XSD, AJAX, Rest API(Single Sign On and Integration with LMS[Learning Management System]),
-      HTML5, XHTML, DHTML, CSS3, SQL SERVER 2008, JQuery, TortoiseSVN was used
-      to control the project version. Agile Methodologies(SCRUM) was used to do further development. Custom CMS where administrator can manage student's enrolment, promocode,
-      course details, student's personal details, exam booking, project booking etc.
+      Web programming ( ASP.NET(4.0), C#, WebForms, Web API with DotNetOpenAuth, Nuclion CMS, Custom CMS,  Component Art Frameworks, LINQ, AJAX, REST Web Service, Twitter Bootstrap, XHTML, DHTML, CSS3, HTML5,  SQL Server 2008/2012, JQuery, JavaScript, Classic ASP, PHP, TortoiseSVN etc.
+      Onyx CRM maintenance.
+      Nuclion CMS maintenance.
+      Report generation using Crystal Report 8 and stored procedure.
     </Description>
     <SortOrder>2</SortOrder>
   </Image>
   <Image>
     <ImageID>3</ImageID>
     <Category>E-Recruitment</Category>
-    <Title>Bond International Software Pty Ltd</Title>
+    <Title>Bond International Software</Title>
     <Caption>http://www.bondinternationalsoftware.com/</Caption>
     <ProjectDate>June,2010</ProjectDate>
     <Path>../../Image/portfolio/Recruitment/Thumb/Bond.jpg</Path>

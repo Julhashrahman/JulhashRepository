@@ -4,7 +4,7 @@
 	margin:0 !important;
 	padding: 0px;	
 	height: 32px;
-	background: url(../img/tabs-divider.png) no-repeat bottom center;
+	background: url(../images/tabs-divider.png) no-repeat bottom center;
 }
 
 body.home .tabs { 
@@ -34,14 +34,14 @@ ul.tabs a {
 	padding: 0px 0px 0px 10px;	
 	position:relative;
 	top:0px;
-	background:  url(../img/tabs.png) no-repeat;
+	background:  url(../images/tabs.png) no-repeat;
 }
 
 ul.tabs a span{ 
 	display:block;
 	height: 100%;
 	padding-right: 10px;
-	background:  url(../img/tabs.png) no-repeat right -40px;
+	background:  url(../images/tabs.png) no-repeat right -40px;
 }
 
 #content ul.tabs a{

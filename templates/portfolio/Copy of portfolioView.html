@@ -1,0 +1,148 @@
+﻿<div class="col-12" style="border-bottom: 1px solid #fff; padding-bottom: 20px;">
+    <ul class="nav nav-pills pro-filter" style="margin: 0px 18px;">
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'All'? 'active' : '' " >
+            <a href="#/portfolio/All/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'All'? 'active' : '' " >All</a>
+        </li>
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Commerce'? 'active' : '' ">
+            <a href="#/portfolio/E-Commerce/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Commerce'? 'active' : '' ">E-Commerce</a>
+        </li>
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Education'? 'active' : '' ">
+            <a href="#/portfolio/E-Education/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Education'? 'active' : '' ">E-Education</a>
+        </li>
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Recruitment'? 'active' : '' ">
+            <a href="#/portfolio/E-Recruitment/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'E-Recruitment'? 'active' : '' ">E-Recruitment</a>
+        </li>
+        <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'Informative'? 'active' : '' ">
+            <a href="#/portfolio/Informative/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'Informative'? 'active' : '' ">Informative</a>
+        </li>
+    </ul>
+
+</div>
+
+
+<div class="col-12" style="text-align: left;">
+    <div data-ng-repeat="portfolio in data.portfolioViewModel.PortfolioList">
+
+        <!-- project -->
+        <div class="project">
+            <h1>
+                <a data-ng-href="{{ portfolio.Caption }}">{{ portfolio.Title }}</a>
+            </h1>
+            <!-- shadow -->
+            <div class="project-shadow">
+                <!-- project-thumb -->
+                <div class="project-thumbnail" data-ng-mouseover="slideDown(portfolio)" data-ng-mouseleave="slideUp(portfolio)">
+                    <!-- meta -->
+                    <ul class="meta">
+                        <li><strong>Project date</strong>&nbsp;{{ portfolio.ProjectDate }}  </li>
+                        <li><strong>Client</strong>&nbsp; {{ portfolio.Title }} </li>
+                        <li><strong>Visit website</strong> <a href="#">{{ portfolio.Caption }}</a></li>
+                    </ul>
+                    <!-- ENDS meta -->
+                    <a data-ng-href="/Project/index/{{ portfolio.ID }}?category={{ portfolio.Category }}" class="cover" data-ng-class="portfolio.className">
+                        <img class="img-responsive" data-ng-src="{{ portfolio.Path.replace('Thumb', 'Large') }}" data-ng-alt="{{ portfolio.Title }}" />
+                    </a>
+                </div>
+                <!-- ENDS project-thumb -->
+                <div class="the-excerpt" style="height:40px; overflow:hidden;">
+                    {{ portfolio.Description }}
+                </div>
+                <a data-ng-href="/Project/index/{{ portfolio.ID }}?category={{ portfolio.Category }}" class="read-more link-button"><span>View project</span></a>
+            </div>
+            <!-- ENDS shadow -->
+        </div>
+        <!-- ENDS project -->
+    </div>
+</div>
+
+
+<!--<div class="col-6">
+    <div data-ng-show="data.paginatedPortfolio.Portfolios.length > 1">
+        <div data-ng-repeat="portfolio in data.paginatedPortfolio.Portfolios">
+            
+            <div class="project" data-ng-if="$index > 0">
+                <h1>
+                    <a data-ng-href="{{ portfolio.Caption }}">{{ portfolio.Title }}</a>
+                </h1>              
+                <div class="project-shadow">
+                    <div class="project-thumbnail" data-ng-mouseover="slideDown(portfolio)" data-ng-mouseleave="slideUp(portfolio)">
+                        <ul class="meta">
+                            <li><strong>Project date</strong>&nbsp;{{ portfolio.ProjectDate }}  </li>
+                            <li><strong>Client</strong>&nbsp; {{ portfolio.Title }} </li>
+                            <li><strong>Visit website</strong> <a href="#">{{ portfolio.Caption }}</a></li>
+                        </ul>
+              
+                        <a data-ng-href="/Project/index/{{ portfolio.ID }}?category={{ portfolio.Category }}" class="cover" data-ng-class="portfolio.className">
+                            <img class="img-responsive" data-ng-src="{{ portfolio.Path.replace('Thumb', 'Large') }}" data-ng-alt="{{ portfolio.Title }}" />                           
+                        </a>
+                    </div>
+              
+                    <div class="the-excerpt">
+                        {{ portfolio.Description }}
+                    </div>
+                    <a data-ng-href="/Project/index/{{ portfolio.ID }}?category={{ portfolio.Category }}" class="read-more link-button"><span>View project</span></a>
+                </div>
+              
+            </div>
+           
+        </div>
+    </div>
+</div>-->
+
+<!--<div class="container" style="min-height: 400px;">
+
+    <div>
+        Count: {{ data.paginatedPortfolio.Portfolios.length }}
+
+    </div>
+
+
+    <div data-ng-repeat="portfolio in data.paginatedPortfolio.Portfolios">
+        <div class="row" style="border: 1px solid green;">
+            <a data-ng-href="#/portfolio/{{portfolio.ID}}">{{ portfolio.ID }} </a>
+            <div>
+                <p data-ng-hide="editMode">{{ portfolio.Category }}</p>
+                <input type="text" data-ng-show="editMode" data-ng-model="portfolio.Category" />
+            </div>
+
+            <div>
+                <p data-ng-hide="editMode">
+                    <a data-ng-click="toggleEdit(portfolio)" href="javascript:void(0);">Edit</a>
+                </p>
+
+                <p data-ng-show="editMode">
+                    <a data-ng-click="update(portfolio)" href="javascript:void(0);">Update</a>
+                </p>
+
+            </div>
+
+        </div>
+    </div>-->
+
+<div style="clear: both;"></div>
+
+<div class="col-12 text-center" data-ng-show="data.portfolioViewModel.PortfolioList.length > 0">
+    <ul class="pagination">
+        <li>
+            <a data-ng-href="#/portfolio/{{ data.portfolioViewModel.SearchCriteria.SelectedCategory }}/{{ data.portfolioViewModel.Pagination.PageIndex - 1 }}"
+                data-ng-hide="!data.portfolioViewModel.Pagination.HasPreviousPage">&laquo;</a>
+        </li>
+        <li data-ng-repeat="n in [] | range:  data.portfolioViewModel.Pagination.TotalPages " data-ng-class="{active: (n -1) == data.portfolioViewModel.Pagination.PageIndex }">
+            <a data-ng-href="#/portfolio/{{ data.portfolioViewModel.SearchCriteria.SelectedCategory }}/{{  n - 1 }}">{{ n  }}</a>
+        </li>
+
+        <li>
+            <a data-ng-href="#/portfolio/{{ data.portfolioViewModel.SearchCriteria.SelectedCategory }}/{{ data.portfolioViewModel.Pagination.PageIndex + 1 }}"
+                data-ng-hide="!data.portfolioViewModel.Pagination.HasNextPage">&raquo;</a>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+

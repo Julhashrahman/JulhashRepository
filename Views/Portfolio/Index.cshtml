@@ -1,154 +1,35 @@
-﻿@model JulhashWebsite.Helpers.PaginatedList<JulhashWebsite.Models.Portfolio>
-@{
+﻿@{
     ViewBag.Title = "Portfolio";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.InitModule = "portfolioIndex";
+}
+
+@section AddToHead{
+    @*<link href="@Url.Content("~/Content/Upload.css")" rel="stylesheet" type="text/css" />*@
+    <link href="~/Content/PortfolioStyle.css" rel="stylesheet" />
+}
+
+@section scripts
+{
+    <script src="~/app/portfolio-index.js"></script>   
+   @*<script src="~/app/portfolio-index.min.js"></script>   *@ 
 }
 
 
 <div class="container">
-    <div id="projects-list" class="row" style="text-align: left">
-        <div class="span12">
+    <div id="projects-list" class="row" style="text-align: left;">
+        <div class="col-md-12" >
             <!-- title -->
             <div id="page-title">
-                <span class="title">Portfolio</span> <span class="subtitle">Some of my web development
-                    work</span>
+                <span class="title">Portfolio</span> <span class="subtitle">Some of my projects.</span>
             </div>
         </div>
 
-        @{ Html.RenderAction("PortfolioMenu", "Nav"); }
+       @* @{ Html.RenderAction("PortfolioMenu", "Nav"); }*@
 
-       
-        <div class="span6" style="text-align: center;">
-            @{
-                string itemPath = "";
-                itemPath = @Model[0].Path.Replace("Thumb", "Large");
-            }
-            <!-- project -->
-            <div class="project">
-                <h1>
-                    <a href="@Model[0].Caption">@Model[0].Title</a></h1>
-                <!-- shadow -->
-                <div class="project-shadow">
-                    <!-- project-thumb -->
-                    <div class="project-thumbnail">
-                        <!-- meta -->
-                        <ul class="meta">
-                            <li><strong>Project date</strong>&nbsp;@Model[0].ProjectDate  </li>
-                            <li><strong>Client</strong>&nbsp; @Model[0].Title </li>
-                            <li><strong>Visit website</strong> <a href="#">@Model[0].Caption</a></li>
-                        </ul>
-                        <!-- ENDS meta -->
-                        <a href="/Project/index/@Model[0].ID?category=@ViewBag.selectedPortfolioItem" class="cover">
-                            <img class="img-responsive" src="@Url.Content(@itemPath)" alt="@Model[0].Title" /></a>
-                    </div>
-                    <!-- ENDS project-thumb -->
-                    <div class="the-excerpt">
-                        @Model[0].Description
-                    </div>
-                    <a href="/Project/index/@Model[0].ID?category=@ViewBag.selectedPortfolioItem" class="read-more link-button"><span>View project</span></a>
-                </div>
-                <!-- ENDS shadow -->
-            </div>
-            <!-- ENDS project -->
-        </div>
-        <div class="span6">
-            @if (Model.Count > 1)
-            {
-
-
-                string itemPath2 = "";
-                itemPath2 = @Model[1].Path.Replace("Thumb", "Large");
-                           
-                <!-- project -->
-                <div class="project">
-                    <h1>
-                        <a href="@Model[1].Caption">@Model[1].Title</a></h1>
-                    <!-- shadow -->
-                    <div class="project-shadow">
-                        <div class="project-thumbnail">
-                            <!-- project-thumb -->
-                            <!-- meta -->
-                            <ul class="meta">
-                                <li><strong>Project date</strong>&nbsp;@Model[1].ProjectDate  </li>
-                                <li><strong>Client</strong>&nbsp; @Model[1].Title </li>
-                                <li><strong>Visit website</strong> <a href="#">@Model[1].Caption</a></li>
-                            </ul>
-                            <!-- ENDS meta -->
-                            <a href="/Project/index/@Model[0].ID?category=@ViewBag.selectedPortfolioItem" class="cover">
-                                <img class="img-responsive" src="@Url.Content(@itemPath2)" alt="@Model[1].Title" /></a>
-                        </div>
-                        <!-- ENDS project-thumb -->
-                        <div class="the-excerpt">
-                            @Model[1].Description
-                        </div>
-                        <a href="/Project/index/@Model[1].ID?category=@ViewBag.selectedPortfolioItem" class="read-more link-button"><span>View project</span></a>
-                    </div>
-                    <!-- ENDS shadow -->
-                </div>
-                <!-- ENDS project -->
-                       
-            }
-        </div>
-        <div class="span12">
-            <div class="pagination pull-left">
-                <ul>
-
-                    @if (Model.HasPreviousPage)
-                    {      
-                        <li>@Html.ActionLink("<<", "Index", new { page = (Model.PageIndex - 1), category= ViewBag.selectedPortfolioItem}) </li>    
-                    }
-                    @if (@Model.HasNextPage)
-                    {
-                        <li>@Html.ActionLink(">>", "Index", new { page = (Model.PageIndex + 1), category= ViewBag.selectedPortfolioItem })</li>
-                    }
-
-                </ul>
-
-                @*  <ul>
-					<li><a href="#">Prev</a></li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">Next</a></li>
-				  </ul>
-				</div>*@
-            </div>
-        </div>
+        <div data-ng-view=""></div>
     </div>
+
 </div>
 
-@*<script type="text/javascript">
-    $(function () {
-        $('#slides').slides({
-            preload: true,
-            preloadImage: 'img/loading.gif',
-            play: 5000,
-            pause: 2500,
-            hoverPause: true,
-            animationStart: function (current) {
-                $('.caption').animate({
-                    bottom: -35
-                }, 100);
-                if (window.console && console.log) {
-                    // example return of current slide number
-                    console.log('animationStart on slide: ', current);
-                };
-            },
-            animationComplete: function (current) {
-                $('.caption').animate({
-                    bottom: 0
-                }, 200);
-                if (window.console && console.log) {
-                    // example return of current slide number
-                    console.log('animationComplete on slide: ', current);
-                };
-            },
-            slidesLoaded: function () {
-                $('.caption').animate({
-                    bottom: 0
-                }, 200);
-            }
-        });
-    });
-</script>*@
-<!-- MAIN -->
+ 
+

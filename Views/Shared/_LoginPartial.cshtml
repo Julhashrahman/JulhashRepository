@@ -1,0 +1,80 @@
+﻿@*@if (Request.IsAuthenticated)
+{
+    <text>
+    Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        }
+    </text>
+}
+else
+{
+    <ul>
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}*@
+
+
+
+<div class="top-menu">
+  @if (Request.IsAuthenticated) {
+    <ul class="nav navbar-nav pull-right">
+        <!-- BEGIN USER LOGIN DROPDOWN -->
+        <li class="dropdown dropdown-user">
+            <a href="javasccript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <img alt="" class="img-circle" src="../../assets/admin/layout/img/JulhashImage-small.png" />
+                <span class="username username-hide-on-mobile">
+                    @(User.Identity.Name.Substring(0, 3))
+                    @*@Html.ActionLink(User.Identity.Name.Substring(0, 3), "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!*@
+                </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="extra_profile.html">
+                        <i class="fa fa-user"></i>My Profile </a>
+                </li>
+                <li>
+                    <a href="page_calendar.html">
+                        <i class="fa fa-calendar"></i>My Calendar </a>
+                </li>
+                <li>    
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                    {
+                        
+                        <a href="javascript:document.getElementById('logoutForm').submit()">
+                            <i class="fa fa-key"></i>
+                            Log off
+                        </a>
+                        @Html.AntiForgeryToken()
+                    }
+                </li>
+            </ul>
+        </li>
+
+        <!-- END USER LOGIN DROPDOWN -->
+    </ul>
+    }
+
+    else
+    {
+    <ul class="nav navbar-nav pull-right">     
+        <li class="dropdown">
+            <a href="javasccript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                Admin Login    
+            </a>
+            <ul class="dropdown-menu">
+                <li >@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+            </ul>
+        </li>
+    </ul>
+    }
+
+
+
+
+</div>

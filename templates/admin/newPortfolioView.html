@@ -1,0 +1,58 @@
+﻿<h3>New Portfolio</h3>
+
+
+ <!-- testing -->
+    <input type="file" data-file-model="myFile"/>
+    <button data-ng-click="uploadImage()">upload me</button>
+
+
+
+<form name="newPortfolioForm" novalidate data-ng-submit="save()" >
+    <fieldset>
+        <div>
+            <label for="category">Category</label>
+            <input name="category" type="text" data-ng-model="newPortfolio.Category"/>
+            <span class="error" data-ng-show="newPortfolioForm.category.$error.required">*</span>
+            <!--<span class="error" data-ng-show="newTopicForm.title.$error"></span>-->
+        </div>
+        <div>
+            <label for="title">Title</label>
+            <textarea name="title" rows="5" cols="30" data-ng-model="newPortfolio.title" required data-ng-minlength="15" ></textarea>
+            <span class="error" data-ng-show="newPortfolioForm.title.$error.required">*</span>
+            <span class="error" data-ng-show="newPortfolioForm.title.$error.minlength">Minimum 15 Characters</span>
+        </div>
+        <div>
+            <label for="caption">Caption</label>
+            <input name="caption"  type="text" data-ng-model="newPortfolio.Caption" />
+        </div>
+        <div>
+            <label for="projectDate">Project Date</label>
+            <input name="projectDate" type="text" data-ng-model="newPortfolio.ProjectDate" />
+        </div>
+        <div>
+            <label for="path">Path</label>
+            <input name="path" type="text" data-ng-model="newPortfolio.Path" />
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <input name="description" type="text" data-ng-model="newPortfolio.Description" />
+        </div>
+        <div>
+            <label for="sortOrder">Sort Order</label>
+            <input name="sortOrder" type="text" data-ng-model="newPortfolio.SortOrder" />
+        </div>
+        
+        
+   
+
+        <div>
+            <input type="submit" class="btn" value="Save" data-ng-disabled="newPortfolioForm.$invalid" >
+            <a href="#/" class="btn">Cancel</a>
+        </div>
+    </fieldset>
+</form>
+
+
+
+

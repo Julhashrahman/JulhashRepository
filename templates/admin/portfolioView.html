@@ -1,0 +1,59 @@
+﻿<div class="container" style="min-height: 400px;">
+
+    <!-- <div>
+        Count: {{ data.paginatedPortfolio.Portfolios.length }}
+    </div>-->
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Category</th>
+                    <th>Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody data-ng-repeat="portfolio in data.paginatedPortfolio.Portfolios">
+                <tr>
+                    <td><a data-ng-href="#/portfolio/{{portfolio.ID}}">{{ portfolio.ID }} </a></td>
+                    <td>
+                        <p data-ng-hide="editMode">{{ portfolio.Category }}</p>
+                        <input type="text" data-ng-show="editMode" data-ng-model="portfolio.Category" /></td>
+                    <td>
+                         <p data-ng-hide="editMode">{{ portfolio.Title }}</p>
+                        <input type="text" data-ng-show="editMode" data-ng-model="portfolio.Title" />
+                    </td>
+                    <td>
+                        <p data-ng-hide="editMode">
+                            <a data-ng-click="toggleEdit(portfolio)" href="javascript:void(0);">Edit</a>
+                        </p>
+
+                        <p data-ng-show="editMode">
+                            <a data-ng-click="update(portfolio)" href="javascript:void(0);">Update</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+
+
+    <ul class="pagination">
+        <li><a data-ng-href="#/portfolio/{{ data.paginatedPortfolio.PageIndex - 1  }}/{{ data.paginatedPortfolio.category }}" data-ng-hide="!data.paginatedPortfolio.HasPreviousPage">&laquo;</a></li>
+        <li data-ng-repeat="n in [] | range:  data.paginatedPortfolio.PageSize " data-ng-class="{active: (n -1) == data.paginatedPortfolio.PageIndex }">
+            <a data-ng-href="#/portfolio/{{n - 1}}/{{ data.paginatedPortfolio.category }}">{{ n  }}</a>
+        </li>
+
+        <li><a data-ng-href="#/portfolio/{{ data.paginatedPortfolio.PageIndex + 1  }}/{{ data.paginatedPortfolio.category }}" data-ng-hide="!data.paginatedPortfolio.HasNextPage">&raquo;</a></li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+

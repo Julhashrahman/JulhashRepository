@@ -1,0 +1,18 @@
+﻿@*-- admin index-- *@
+
+@{
+    ViewBag.Title = "Admin";
+    ViewBag.InitModule = "adminIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section scripts
+{
+    <script src="~/app/admin-index.js"></script>
+}
+
+
+<div data-ng-view=""></div>
+
+
+
