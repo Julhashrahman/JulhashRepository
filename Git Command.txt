@@ -24,6 +24,10 @@ git push -u origin master
 
 git push -f
 
+Remove files from Git: git rm index.html
+Update all changes: git add -u
+
+Remove file but do not track anymore: git rm --cached index.html
 //--------------------to update/commit to master repo--------//
 
 cd e:GitRepo
