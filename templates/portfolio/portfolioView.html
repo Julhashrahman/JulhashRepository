@@ -49,8 +49,8 @@
                     <div class="the-excerpt" style="height: 40px; overflow: hidden;">
                         {{ data.portfolioViewModel.PortfolioList[0].Description }}
                     </div>
-                    <a href="javascript:void(0);"  
-                        class="read-more link-button" data-ng-click="togglePrject(data.portfolioViewModel.PortfolioList[0])" ><span>View project</span></a>
+                    <a href="javascript:void(0);"
+                        class="read-more link-button" data-ng-click="togglePrject(data.portfolioViewModel.PortfolioList[0])"><span>View project</span></a>
                 </div>
                 <!-- ENDS shadow -->
             </div>
@@ -82,7 +82,7 @@
                         <div class="the-excerpt" style="height: 40px; overflow: hidden;">
                             {{ data.portfolioViewModel.PortfolioList[1].Description }}
                         </div>
-                        <a href="javascript:void(0);"  
+                        <a href="javascript:void(0);"
                             class="read-more link-button" data-ng-click="togglePrject(data.portfolioViewModel.PortfolioList[1])"><span>View project</span></a>
                     </div>
                     <!-- ENDS shadow -->
@@ -123,75 +123,85 @@
 </div>
 
 
-
-<div class="Project-View row" data-ng-show="showProject">
-    <div class="col-md-7" style="padding-top:10px; padding-bottom:10px;">
-        <div class="project-column">
-            <div class="project-shadow">
-                <div class="project-thumbnail">
-                    <img data-ng-src="{{ portfolio.Path.replace('Thumb', 'Large') }}" alt="{{ portfolio.Title }}" />
-                </div>
-                <ul class="meta">
+<div class="Project-View" data-ng-show="showProject">
+    <div class="row">
+        <div class="col-md-7" style="padding-top: 10px; padding-bottom: 10px;">
+            <div class="project-column">
+                <div class="project-shadow">
+                    <div class="project-thumbnail">
+                        <img data-ng-src="{{ portfolio.Path.replace('Thumb', 'Large') }}" alt="{{ portfolio.Title }}" />
+                    </div>
+                    <ul class="meta">
                         <li><strong>Project date</strong>&nbsp; {{ portfolio.ProjectDate }}  </li>
                         <li><strong>Client</strong> &nbsp; {{ portfolio.Title }} </li>
                         <li><strong>Visit website</strong>&nbsp; {{ portfolio.Caption }} </li>
                     </ul>
                     <!-- ENDS meta -->
-                <div class="portfolio-left-shadow">
-                </div>
+                    <div class="portfolio-left-shadow">
+                    </div>
 
-                <h2>Project gallery</h2>
+                    <h2>Project gallery</h2>
 
-                <div class="row">
-                    <div class="col-md-3 pull-left">
-                        <ul class="project-gallery">
-                            <li><a href='' class="fancybox">
-                                <img src="" alt=""></a></li>
-                        </ul>
+                    <div class="row">
+                        <div class="col-md-3 pull-left">
+                            <ul class="project-gallery">
+                                <li><a href='' class="fancybox">
+                                    <img src="" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 pull-left">
+                            <ul class="project-gallery">
+                                <li><a href='' class="fancybox">
+                                    <img src="" alt=""></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-md-3 pull-left">
-                        <ul class="project-gallery">
-                            <li><a href='' class="fancybox">
-                                <img src="" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-3 pull-left">
-                        <ul class="project-gallery">
-                            <li><a href='' class="fancybox">
-                                <img src="" alt=""></a></li>
-                        </ul>
+                    <div class="row">
+                        <div class="col-md-3 pull-left">
+                            <ul class="project-gallery">
+                                <li><a href='' class="fancybox">
+                                    <img src="" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 pull-left">
+                            <ul class="project-gallery">
+                                <li><a href='' class="fancybox">
+                                    <img src="" alt=""></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-md-3 pull-left">
-                        <ul class="project-gallery">
-                            <li><a href='' class="fancybox">
-                                <img src="" alt=""></a></li>
-                        </ul>
-                    </div>
+
                 </div>
 
             </div>
 
         </div>
-    </div>
 
 
-    <div class="col-md-5">
+        <div class="col-md-5">
 
-        <div class="">
+            <div class="">
                 <h1 class="project-title">{{ portfolio.Title }}</h1>
                 {{ portfolio.Project.Description }}
             </div>
             <div class="clear">
             </div>
 
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <button value="Back" data-ng-click="togglePrject('')">Back</button>
+            </div>
+            <br />
+        </div>
     </div>
 
 </div>
-
-
 
 
 
