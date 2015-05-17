@@ -1,14 +1,14 @@
 ﻿//portfolio-index.js
 
-var portfolioIndexModule = angular.module('portfolioIndex', ['ngRoute', 'ngAnimate']);
+var portfolioIndexModule = angular.module('portfolioIndex', ['ngRoute', 'ngAnimate', 'cfp.loadingBarInterceptor', 'angular-loading-bar', 'bootstrapLightbox']);
 
 portfolioIndexModule.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', { redirectTo: '/portfolio/All/0' }).
         when('/portfolio', { redirectTo: '/portfolio/All/0' }).
         when("/portfolio/:category/:page", {
-        controller: "portfoliosController",
-        templateUrl: "/templates/portfolio/portfolioView.html"
-    });
+            controller: "portfoliosController",
+            templateUrl: "/templates/portfolio/portfolioView.html"
+        });
 
     $routeProvider.when("/newportfolio", {
         controller: "newPortfolioController",
@@ -20,7 +20,7 @@ portfolioIndexModule.config(['$routeProvider', function ($routeProvider) {
 
 }]);
 
-portfolioIndexModule.factory("dataService",['$http', '$q',  function ($http, $q) {
+portfolioIndexModule.factory("dataService", ['$http', '$q', function ($http, $q) {
     var _portfolioViewModel = [];
     var _isInit = false;
     var _isReady = function () {
@@ -35,7 +35,7 @@ portfolioIndexModule.factory("dataService",['$http', '$q',  function ($http, $q)
             method: 'Get',
             url: '/api/v1/portfolios/GetPortfolios',
             params: searchCriteria
-            })
+        })
             .then(function (result) {
                 //success
                 console.log(result);
@@ -103,7 +103,7 @@ portfolioIndexModule.factory("dataService",['$http', '$q',  function ($http, $q)
 
 }]);
 
-portfolioIndexModule.controller('portfoliosController',['$scope', '$http', 'dataService', '$routeParams',  function portfoliosController($scope, $http, dataService, $routeParams) {
+portfolioIndexModule.controller('portfoliosController', ['$scope', '$http', 'dataService', '$routeParams', 'Lightbox', function portfoliosController($scope, $http, dataService, $routeParams, Lightbox) {
 
     $scope.data = dataService;
 
@@ -121,51 +121,48 @@ portfolioIndexModule.controller('portfoliosController',['$scope', '$http', 'data
 
 
     $scope.isBusy = false;
-    
+
     $scope.slideDown = function (currentPortfolio) {
         //this.portfolio.className = "slide-up";
         currentPortfolio.className = "slide-up";
     };
-    
+
     $scope.slideUp = function (currentPortfolio) {
         //this.portfolio.className = "slide-down";
         currentPortfolio.className = "slide-down";
     };
 
-
     //if (dataService.isReady() == false) {
     //    $scope.isBusy = true;
-      
 
-    var searchCriteria = {
+
+    $scope.searchCriteria = {
         SelectedCategory: $routeParams.category || "All",
         PageIndex: $routeParams.page || 0,
         PageSize: "2"
     };
 
-    console.log(searchCriteria);
+    //console.log($scope.searchCriteria);
 
-    dataService.getPortfolios(searchCriteria)
-        .then(function () {
-            //success
+    $scope.isBusy = true;
+    dataService.getPortfolios($scope.searchCriteria)
+    .then(function () {          //success
+       // console.log($scope.data);
+    },
+        function () {           //error
+            alert("could not load portfolios");
+        })
+    .then(function () {         //finally
+        $scope.isBusy = false;
+    });
 
-            console.log($scope.data);
 
-        },
-            function () {
-                //error
-                alert("could not load portfolios");
-            })
-        .then(function () {
-            $scope.isBusy = false;
-        });
 
-    // }
 
-        $scope.editMode = false;
+    $scope.editMode = false;
 
-        //by pressing toggleEdit button ng-click in html, this method will be hit
-        $scope.toggleEdit = function (portfolio) {
+    //by pressing toggleEdit button ng-click in html, this method will be hit
+    $scope.toggleEdit = function (portfolio) {
         //$scope.editMode = !$scope.editMode; //this is for all
         $scope.editMode = portfolio;
     }
@@ -176,6 +173,12 @@ portfolioIndexModule.controller('portfoliosController',['$scope', '$http', 'data
         dataService.updatePortfolio(portfolio.ID, portfolio);
         $scope.editMode = false;
     }
+
+
+    $scope.openLightboxModal = function (images, index) {
+        Lightbox.openModal(images, index);
+    }
+
 }]);
 
 
@@ -195,7 +198,7 @@ portfolioIndexModule.controller('portfoliosController',['$scope', '$http', 'data
 
 
 
-portfolioIndexModule.controller("newPortfolioController",['$scope', '$http', '$window', 'dataService', 'fileUpload', function newPortfolioController($scope, $http, $window, dataService, fileUpload) {
+portfolioIndexModule.controller("newPortfolioController", ['$scope', '$http', '$window', 'dataService', 'fileUpload', function newPortfolioController($scope, $http, $window, dataService, fileUpload) {
     $scope.newPortfolio = {};
 
     $scope.save = function () {
@@ -208,11 +211,11 @@ portfolioIndexModule.controller("newPortfolioController",['$scope', '$http', '$w
                 alert("could not save the new portfolio");
             });
     }
-    
+
     $scope.uploadImage = function () {
 
         var file = $scope.myFile;
-        
+
         var uploadUrl = "/api/v1/portfolios/PostImageUpload";
         fileUpload.uploadFileToUrl(file, uploadUrl);
     }
@@ -220,7 +223,7 @@ portfolioIndexModule.controller("newPortfolioController",['$scope', '$http', '$w
 }]);
 
 
-portfolioIndexModule.filter('range',[ function range() {
+portfolioIndexModule.filter('range', [function range() {
     return function (input, total) {
         total = parseInt(total);
         for (var i = 1; i <= total; i++)

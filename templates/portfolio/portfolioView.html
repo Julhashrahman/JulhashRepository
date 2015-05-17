@@ -1,4 +1,9 @@
 ﻿<div class="col-12" style="border-bottom: 1px solid #fff; padding-bottom: 20px;">
+    <div data-ng-show="isBusy">
+        Loading....
+    </div>
+    
+    
     <ul class="nav nav-pills pro-filter" style="margin: 0px 18px;">
         <li data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'All'? 'active' : '' ">
             <a href="#/portfolio/All/0" data-ng-class="data.portfolioViewModel.SearchCriteria.SelectedCategory === 'All'? 'active' : '' ">All</a>
@@ -119,7 +124,7 @@
 
 </div>
 <div data-ng-show="data.portfolioViewModel.PortfolioList.length < 1">
-    <h2>No project found!</h2>
+    <h2 style="color:red;">No project found!</h2>
 </div>
 
 
@@ -143,31 +148,32 @@
                     <h2>Project gallery</h2>
 
                     <div class="row">
-                        <div class="col-md-3 pull-left">
+                        <div class="col-md-6 pull-left">
                             <ul class="project-gallery">
-                                <li><a href='' class="fancybox">
-                                    <img src="" alt=""></a></li>
+                                <li><a href='javascript:;' class="fancybox" data-ng-click="openLightboxModal(portfolio.Project.ImageList, 0)">
+                                        <img data-ng-src="{{ portfolio.Project.ImageList[0].thumbUrl }}" alt="">
+                                    </a></li>
                             </ul>
                         </div>
-                        <div class="col-md-3 pull-left">
+                        <div class="col-md-6 pull-left">
                             <ul class="project-gallery">
-                                <li><a href='' class="fancybox">
-                                    <img src="" alt=""></a></li>
+                                <li><a href='javascript:;' class="fancybox" data-ng-click="openLightboxModal(portfolio.Project.ImageList, 1)">
+                                    <img data-ng-src="{{ portfolio.Project.ImageList[1].thumbUrl }}"alt=""></a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-3 pull-left">
+                        <div class="col-md-6 pull-left">
                             <ul class="project-gallery">
-                                <li><a href='' class="fancybox">
-                                    <img src="" alt=""></a></li>
+                                <li><a href='javascript:;' class="fancybox" data-ng-click="openLightboxModal(portfolio.Project.ImageList, 2)">
+                                    <img data-ng-src="{{ portfolio.Project.ImageList[2].thumbUrl }}" alt=""></a></li>
                             </ul>
                         </div>
-                        <div class="col-md-3 pull-left">
+                        <div class="col-md-6 pull-left">
                             <ul class="project-gallery">
-                                <li><a href='' class="fancybox">
-                                    <img src="" alt=""></a></li>
+                                <li><a href='javascript:;' class="fancybox" data-ng-click="openLightboxModal(portfolio.Project.ImageList, 3)">
+                                    <img data-ng-src="{{ portfolio.Project.ImageList[3].thumbUrl }}" alt=""></a></li>
                             </ul>
                         </div>
                     </div>

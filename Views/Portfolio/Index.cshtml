@@ -6,29 +6,41 @@
 @section AddToHead{
     @*<link href="@Url.Content("~/Content/Upload.css")" rel="stylesheet" type="text/css" />*@
     <link href="~/Content/PortfolioStyle.css" rel="stylesheet" />
+    <link href="~/Support/LoadingBar/loading-bar.css" rel="stylesheet" />
+    <link href="~/Support/AngularLightbox/angular-bootstrap-lightbox.min.css" rel="stylesheet" />
 }
 
 @section scripts
-{   
-   <script src="~/app/portfolio-index.min.js"></script>    
+{
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    @*<script src="~/Scripts/angular-ui/ui-bootstrap.min.js"></script>*@
+
+    <script src="~/Scripts/angular-touch.min.js"></script>
+
+    <script src="~/Support/LoadingBar/loading-bar.js"></script>
+    <script src="~/Support/AngularLightbox/angular-bootstrap-lightbox.min.js"></script>
+    
+    @*<script src="~/app/portfolio-index.js"></script>*@
+    <script src="~/app/portfolio-index.min.js"></script>
+
 }
 
 
 <div class="container">
     <div id="projects-list" class="row" style="text-align: left;">
-        <div class="col-md-12" >
+        <div class="col-md-12">
             <!-- title -->
             <div id="page-title">
                 <span class="title">Portfolio</span> <span class="subtitle">Some of my projects.</span>
             </div>
         </div>
 
-       @* @{ Html.RenderAction("PortfolioMenu", "Nav"); }*@
+        @* @{ Html.RenderAction("PortfolioMenu", "Nav"); }*@
 
         <div data-ng-view=""></div>
     </div>
 
 </div>
 
- 
+
 
