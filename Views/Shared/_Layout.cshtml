@@ -63,7 +63,105 @@
 
 </head>
 <body>
-   Under Construction. Please come back later.
+   <header >
+        <!-- Navigation -->
+        <nav class="navbar img-responsive img-responsive2" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div>
+                        <div style="float: left;">
+                            <h1><a href="#"><span style="color: #DB522F;">Julhash</span>&nbsp;<span style="color: gainsboro;">Rahman</span><br />
+                                <span style="font-size: 20px; color: darksalmon; padding-left: 40px;">Senior .Net Developer</span></a></h1>
+                        </div>
+                        <div id="lily" style="float: left;">
+                            <img src="../../Images/lily.png" class="img-responsive" style="background-size: 100% 117px; width: 100%;" alt="" />
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                @{ Html.RenderAction("Menu", "Nav", new { activeItem = ViewBag.selectedItem });}
+
+            </div>
+        </nav>
+        <div class="color-bar"></div>
+
+    </header>
+    <div class="color-bar"></div>
+
+    @RenderBody()
+
+
+
+    @RenderSection("featured", required: false)
+
+
+    <section id="footerSection" >
+        <div class="container">
+            <footer class="footer well well-small">
+                <div class="row">
+                    <div class="col-md-4 custom">
+                        <h6>Pages</h6>
+                        <ul>
+                            <li class="page_item"><a href="/">Home</a></li>
+                            <li class="page_item"><a href="/Portfolio">Portfolio</a></li>
+                            @* <li class="page_item"><a href="blog.html">Blog</a></li>*@
+                            <li class="page_item"><a href="/gallery">Gallery</a></li>
+                            <li class="page_item"><a href="/Feedback">Feedback</a></li>
+                            <li class="page_item"><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 custom">
+                        <h6>Categories</h6>
+                        <ul>
+                            <li class="page_item"><a href="#">E-Commerce</a></li>
+                            <li class="page_item"><a href="#/">E-Education</a></li>
+                            <li class="page_item"><a href="#">E-Recruitment</a></li>
+                            <li class="page_item"><a href="#">Informative</a></li>
+                            <li class="page_item"><a href="#">Digital Ads</a></li>
+                            @*<li class="page_item"><a href="#">Logistics</a></li>*@
+                        </ul>
+                    </div>
+                    <div class="col-md-4 custom">
+                        <h6>About Myself</h6>
+                        <p>
+                            I have completed my BSC. in Computer Science in the Philippines. 
+                            After that I have decided to come over to Australia and focused my career on IT, 
+                            hence I have completed Advanced Standing BSC in IT and Msc in IT in the University of Ballarat, Melbourne, Australia. 
+                            Its been around 5 years, I have been working as a Web Developer 
+                            and got opportunity to work with variety of projects such as e-commerce, 
+                            online education, digital agency, legal practitioner, informative, 
+                            logistics and so on. In my spare time, I love to explore myself to learn latest technologies as they become available.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-xs-12">
+                        2015 Julhash Rahman Website all rights reserved.
+                    </div>
+                    <div class=" col-md-2 col-xs-12 pull-right">
+                        <!-- Social -->
+                        <ul class="social ">
+                            <li><a href="https://twitter.com/JulhashRahman" target="_blank" class="poshytip twitter" title="Follow my tweets"></a></li>
+                            <li><a href="http://au.linkedin.com/pub/julhash-rahman/46/66b/b01" target="_blank" class="poshytip linkedin" title="Linked me"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      
       
 
 </body>
